@@ -1,0 +1,292 @@
+SciDAVis 1.23.0 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+3415
+<table creation_time="2021-20-04 13:32:02:691" caption_spec="%n%C{ - }%c" name="Table1" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2021-20-04 13:32:02:691" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2021-20-04 13:32:02:691" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2021-20-04 13:32:02:691" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">2.3010299960000000e+00</row><row type="TypeDouble" index="2" invalid="no">2.6020599910000000e+00</row><row type="TypeDouble" index="3" invalid="no">2.9030899870000000e+00</row><row type="TypeDouble" index="4" invalid="no">3.2041199830000000e+00</row><row type="TypeDouble" index="5" invalid="no">3.5051499779999999e+00</row><row type="TypeDouble" index="6" invalid="no">3.8061799740000000e+00</row><row type="TypeDouble" index="7" invalid="no">4.1072099700000004e+00</row><row type="TypeDouble" index="8" invalid="no">4.4082399649999999e+00</row><row type="TypeDouble" index="9" invalid="no">4.7092699610000004e+00</row><row type="TypeDouble" index="10" invalid="no">5.0102999570000000e+00</row><row type="TypeDouble" index="11" invalid="no">5.3113299520000004e+00</row><row type="TypeDouble" index="12" invalid="no">5.6123599479999999e+00</row></column><column creation_time="2021-20-04 13:32:02:692" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2021-20-04 13:32:02:692" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2021-20-04 13:32:02:692" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">3.4313653730000002e+00</row><row type="TypeDouble" index="1" invalid="no">4.1303337679999998e+00</row><row type="TypeDouble" index="2" invalid="no">4.6354837470000003e+00</row><row type="TypeDouble" index="3" invalid="no">5.1205739310000000e+00</row><row type="TypeDouble" index="4" invalid="no">5.6020599910000000e+00</row><row type="TypeDouble" index="5" invalid="no">6.1072099700000004e+00</row><row type="TypeDouble" index="6" invalid="no">6.6232492900000004e+00</row><row type="TypeDouble" index="7" invalid="no">7.1583624920000002e+00</row><row type="TypeDouble" index="8" invalid="no">7.7024305359999996e+00</row><row type="TypeDouble" index="9" invalid="no">8.2455126679999999e+00</row><row type="TypeDouble" index="10" invalid="no">8.7839035790000004e+00</row><row type="TypeDouble" index="11" invalid="no">9.3147096929999993e+00</row><row type="TypeDouble" index="12" invalid="no">9.8129133569999993e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	0	0	573	382	
+
+</table>
+<multiLayer>
+Graph1	1	1	4/20/2021 1:33:26 PM
+geometry	0	0	514	438	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	448	307
+Alignement	0	0
+<graph>
+ggeometry	5	5	489	369
+PlotTitle	Title	#000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	X Axis Title	Y Axis Title			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+TitleFont	MS Shell Dlg 2	10	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	8	75	0	0	0
+AxisFont0	MS Shell Dlg 2	8	50	0	0	0
+AxisFont1	MS Shell Dlg 2	8	50	0	0	0
+AxisFont2	MS Shell Dlg 2	8	50	0	0	0
+AxisFont3	MS Shell Dlg 2	8	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table1_1	Table1_2	2	1	0	0	1	7	1	0	0	0	0	14	1	2	0	0	29	1
+FunctionCurve	0,NonLinearFit1,x,2,5.612359948	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	73361064	1263159624	1
+<formula>
+a=1.08888384872678
+b=1.74185037495649
+
+log10(a*(10^x)^b)
+</formula>
+FunctionCurve	0,NonLinearFit2,x,2,5.612359948	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	73360664	1263159624	1
+<formula>
+a=1.08888380840826
+b=1.74185037883759
+
+log10(a*(10^x)^b)
+</formula>
+FunctionCurve	0,NonLinearFit3,x,2,5.612359948	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	73360624	1263159624	1
+<formula>
+a=1.08888377340191
+b=1.74185038210356
+
+log10(a*(10^x)^b)
+</formula>
+FunctionCurve	0,NonLinearFit4,x,2,5.612359948	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	73360784	1263159624	1
+<formula>
+a=1.08888375727009
+b=1.74185038358806
+
+log10(a*(10^x)^b)
+</formula>
+FunctionCurve	0,NonLinearFit5,x,2,5.612359948	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	73361024	1263159624	1
+<formula>
+a=1.0888837571992
+b=1.74185038359001
+
+log10(a*(10^x)^b)
+</formula>
+FunctionCurve	0,NonLinearFit6,x,2,5.612359948	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	73361104	1263159624	1
+<formula>
+a=1.08888375651418
+b=1.74185038370356
+
+log10(a*(10^x)^b)
+</formula>
+FunctionCurve	0,NonLinearFit7,x,2,5.612359948	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	73360744	1263159624	1
+<formula>
+a=1.08888377039551
+b=1.74185038242056
+
+log10(a*(10^x)^b)
+</formula>
+FunctionCurve	0,NonLinearFit8,x,2,5.612359948	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	73360704	1263159624	1
+<formula>
+a=1.08888376952399
+b=1.74185038243211
+
+log10(a*(10^x)^b)
+</formula>
+FunctionCurve	0,NonLinearFit9,x,2,5.612359948	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	73360984	1263159624	1
+<formula>
+a=1.08888380085524
+b=1.74185037978219
+
+log10(a*(10^x)^b)
+</formula>
+scale	0	3	10	0	8	5	0	0
+scale	1	3	10	0	8	5	0	0
+scale	2	1.5	6	0	8	5	0	0
+scale	3	1.5	6	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	1.60089686098655	9.76973684210526	MS Shell Dlg 2	8	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}Table1_2	\c{2}NonLinearFit1	\c{3}NonLinearFit2	\c{4}NonLinearFit3	\c{5}NonLinearFit4	\c{6}NonLinearFit5	\c{7}NonLinearFit6	\c{8}NonLinearFit7	\c{9}NonLinearFit8	\c{10}NonLinearFit9	</legend>
+</graph>
+</multiLayer>
+<log>
+[4/20/2021 1:34:07 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.08888384872678 +/- 0.119339623915033
+b  = 1.74185037495649 +/- 0.0119913739331175
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545431
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 2
+Status = success
+---------------------------------------------------------------------------------------
+[4/20/2021 1:34:12 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.08888380840826 +/- 0.119339613008491
+b  = 1.74185037883759 +/- 0.0119913738752695
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545427
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/20/2021 1:34:12 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.08888377340191 +/- 0.119339608380616
+b  = 1.74185038210356 +/- 0.0119913726014809
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545426
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/20/2021 1:34:13 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.08888375727009 +/- 0.119339616475231
+b  = 1.74185038358806 +/- 0.0119913739960697
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545426
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/20/2021 1:34:13 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.0888837571992 +/- 0.119339605864342
+b  = 1.74185038359001 +/- 0.0119913720915031
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545427
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/20/2021 1:34:14 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.08888375651418 +/- 0.119339621954621
+b  = 1.74185038370356 +/- 0.0119913741866684
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545427
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/20/2021 1:34:14 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.08888377039551 +/- 0.119339589716801
+b  = 1.74185038242056 +/- 0.0119913708326274
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545427
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/20/2021 1:34:15 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.08888376952399 +/- 0.119339569300546
+b  = 1.74185038243211 +/- 0.0119913685060338
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545427
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/20/2021 1:34:16 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.08888380085524 +/- 0.119339630020479
+b  = 1.74185037978219 +/- 0.0119913750605498
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545425
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/20/2021 1:34:16 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.08888380085524 +/- 0.119339611219887
+b  = 1.74185037978219 +/- 0.0119913725392795
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545425
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = cannot reach the specified tolerance in X
+---------------------------------------------------------------------------------------
+[4/20/2021 1:34:17 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.08888380085524 +/- 0.119339611219887
+b  = 1.74185037978219 +/- 0.0119913725392795
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545425
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = cannot reach the specified tolerance in X
+---------------------------------------------------------------------------------------
+[4/20/2021 1:34:17 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_2, using function: log10(a*(10^x)^b)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2 to x = 5.612359948
+a  = 1.08888380085524 +/- 0.119339611219887
+b  = 1.74185037978219 +/- 0.0119913725392795
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0260868389545425
+R^2 = 0.999478946305987
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = cannot reach the specified tolerance in X
+---------------------------------------------------------------------------------------
+</log>
