@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 
 import glob
 
+#  python .\computeDose.py DSNE_SPE DSNE_Table_3.3.1.10.2-1.txt angleWeights.txt 1.42E-3
 
 fileDirectory    = sys.argv[1]
 energyCenterFile = './' + fileDirectory + '/' + sys.argv[2]
