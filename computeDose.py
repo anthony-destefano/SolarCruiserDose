@@ -50,7 +50,7 @@ for i in range(0, NE):
 
 		depth, E_ion, E_recoil = np.loadtxt(TRIM_filename, unpack=True, skiprows=26)
 
-		dose = (E_ion + E_recoil) * 1.E8 * 1.60218E-19 * flux[i] * weight[j] / density
+		dose = (E_ion + E_recoil) * 1.E8 * 1.60218E-19 * flux[i] * weight[j] / density # rad
 
 		dose_depth     = dose_depth     + dose
 		dose_energy[i] = dose_energy[i] + np.sum(dose)
