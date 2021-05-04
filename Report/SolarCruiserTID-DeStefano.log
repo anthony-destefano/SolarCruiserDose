@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  3 MAY 2021 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  4 MAY 2021 17:04
 entering extended mode
 **./SolarCruiserTID-DeStefano.tex
 (SolarCruiserTID-DeStefano.tex
@@ -1256,6 +1256,10 @@ Overfull \hbox (22.05534pt too wide) in paragraph at lines 2--2
 \tf@lot=\write7
 \openout7 = `SolarCruiserTID-DeStefano.lot'.
 
+ (SolarCruiserTID-DeStefano.lol)
+\tf@lol=\write8
+\openout8 = `SolarCruiserTID-DeStefano.lol'.
+
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 103.
  [2] [1
@@ -1265,13 +1269,13 @@ Overfull \hbox (16.13623pt too wide) in paragraph at lines 137--144
  [][] 
  []
 
-<../SRIM_setup.PNG, id=116, 591.71063pt x 485.56406pt>
+<../SRIM_setup.PNG, id=120, 591.71063pt x 485.56406pt>
 File: ../SRIM_setup.PNG Graphic file (type png)
 <use ../SRIM_setup.PNG>
 Package pdftex.def Info: ../SRIM_setup.PNG  used on input line 154.
 (pdftex.def)             Requested size: 375.0pt x 307.73701pt.
 [2] [3 <../SRIM_setup.PNG>]
-<../Bragg_peak_data/dose_depth_percentile_vs_energy.png, id=135, 578.16pt x 505
+<../Bragg_peak_data/dose_depth_percentile_vs_energy.png, id=139, 578.16pt x 505
 .89pt>
 File: ../Bragg_peak_data/dose_depth_percentile_vs_energy.png Graphic file (type
  png)
@@ -1307,11 +1311,11 @@ LaTeX Warning: Font shape declaration has incorrect series value `mc'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5] [6]
-<../L2CPE/L2-CPE-Setup.PNG, id=165, 232.87pt x 243.40938pt>
+<../L2CPE/L2-CPE-Setup.PNG, id=169, 232.87pt x 243.40938pt>
 File: ../L2CPE/L2-CPE-Setup.PNG Graphic file (type png)
 <use ../L2CPE/L2-CPE-Setup.PNG>
-Package pdftex.def Info: ../L2CPE/L2-CPE-Setup.PNG  used on input line 244.
-(pdftex.def)             Requested size: 356.24886pt x 372.41139pt.
+Package pdftex.def Info: ../L2CPE/L2-CPE-Setup.PNG  used on input line 245.
+(pdftex.def)             Requested size: 281.25pt x 294.00998pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1349,21 +1353,21 @@ Package caption Warning: Unused \captionsetup[sub] on input line 28.
 See the caption package documentation for explanation.
 
 [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 354.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 354.
  (SolarCruiserTID-DeStefano.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 354.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 354.
 Package rerunfilecheck Info: File `SolarCruiserTID-DeStefano.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: D64EE62542B218AFC8647061B7D504CA;816.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 354.
  ) 
 Here is how much of TeX's memory you used:
- 34627 strings out of 481292
- 814979 string characters out of 2906380
- 1737891 words of memory out of 3000000
- 49396 multiletter control sequences out of 15000+200000
+ 34632 strings out of 481292
+ 815135 string characters out of 2906380
+ 1739108 words of memory out of 3000000
+ 49398 multiletter control sequences out of 15000+200000
  559752 words of font info for 80 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,98p,903b,2413s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1384,9 +1388,9 @@ Users/adestefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8
 a.pfb><C:/Users/adestefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helv
 etic/uhvr8a.pfb><C:/Users/adestefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/urw/helvetic/uhvro8a.pfb>
-Output written on SolarCruiserTID-DeStefano.pdf (14 pages, 1543044 bytes).
+Output written on SolarCruiserTID-DeStefano.pdf (14 pages, 1544233 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
+ 378 PDF objects out of 1000 (max. 8388607)
  133 named destinations out of 1000 (max. 500000)
  132 words of extra memory for PDF output out of 10000 (max. 10000000)
 

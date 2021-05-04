@@ -99,7 +99,7 @@
 \tableofcontents
 \listoffigures
 \listoftables
-%\lstlistoflistings
+\lstlistoflistings
 \newpage
 
 
@@ -184,7 +184,7 @@ The natural environments for the RCD of Solar Cruiser are separated into a mid-e
 
 The solar particle event (SPE) environment for interplanetary space is derived following the same procedure as outlined in the Cross-Program Design Specification for Natural Environments (DSNE) Section 3.3.1 (see the technical notes at the end of the section). A 2-year trajectory is defined in interplanetary space at the sub-L1 location of 0.984 AU in SPENVIS\footnote{\url{https://www.spenvis.oma.be/}} under the \textsf{Coordinate generators} tab. Once this is set, the SPE fluence is computed under the \textsf{Solar particle mission fluences}. The following parameters are set:
 \begin{itemize}
-	\item Solar particle model: ESP-PSYCHIC (worst event fluence)
+	\item Solar particle model: ESP-PSYCHIC (total fluence)
 	\item Ion range: H to H
 	\item Prediction period: override
 	\item Prediction period [years]: 2.0
@@ -193,41 +193,42 @@ The solar particle event (SPE) environment for interplanetary space is derived f
 	\item Confidence level [\%]: 95.0
 \end{itemize}
 
-Table \ref{tab:ESP-PSYCHIC_2-year_subL1} shows the down-selected energy bins that match DSNE Table 3.3.1.10.2-1. In terms of fluence $> 100$ keV, the 2-year SPE environment shown in Table \ref{tab:ESP-PSYCHIC_2-year_subL1} is only $6\%$ greater than the unshielded SPE environment is DSNE Table 3.3.1.10.2-1, despite the fluence duration doubling. This is why it is important to run the ESP-PSYCHIC model for the required mission length and not multiply Table 3.3.1.10.2-1 by the number of years. Otherwise, a large overestimate occurs. 
+Table \ref{tab:ESP-PSYCHIC_2-year_subL1} shows the down-selected energy bins that match DSNE Table 3.3.1.10.2-1. In terms of fluence $> 100$ keV, the 2-year SPE environment shown in Table \ref{tab:ESP-PSYCHIC_2-year_subL1} is $3.7\times$ greater than the unshielded SPE environment is DSNE Table 3.3.1.10.2-1.%, despite the fluence duration doubling.
+This is why it is important to run the ESP-PSYCHIC model for the required mission length and not multiply Table 3.3.1.10.2-1 by the number of years.% Otherwise, a large overestimate occurs. 
 
 \begin{table}[!h]\centering
 	\caption{ESP-PSYCHIC worst event fluence of protons for 2 years during solar maximum at 0.984 AU. The energy center $=\sqrt{\text{bin left edge}\times\text{bin right edge}.}$ }\label{tab:ESP-PSYCHIC_2-year_subL1}
 	\begin{tabular}{|c | c | c | c |}\hline
 		Energy Center (keV) & Bin Flux (\#/cm$^2$) & Bin Width (keV) & Bin Left Edge (keV) \\\hline
 
-1.58E+02&2.08E+11&1.50E+02&1.00E+02\\\hline
-3.54E+02&1.00E+11&2.50E+02&2.50E+02\\\hline
-7.07E+02&6.83E+10&5.00E+02&5.00E+02\\\hline
-1.41E+03&4.65E+10&1.00E+03&1.00E+03\\\hline
-2.65E+03&2.74E+10&1.50E+03&2.00E+03\\\hline
-4.18E+03&1.46E+10&1.50E+03&3.50E+03\\\hline
-5.96E+03&1.51E+10&2.10E+03&5.00E+03\\\hline
-7.54E+03&4.83E+09&9.00E+02&7.10E+03\\\hline
-8.49E+03&4.23E+09&1.00E+03&8.00E+03\\\hline
-9.49E+03&3.38E+09&1.00E+03&9.00E+03\\\hline
-1.26E+04&1.07E+10&6.00E+03&1.00E+04\\\hline
-1.70E+04&1.88E+09&2.00E+03&1.60E+04\\\hline
-1.90E+04&1.52E+09&2.00E+03&1.80E+04\\\hline
-2.24E+04&3.50E+09&5.00E+03&2.00E+04\\\hline
-2.96E+04&3.77E+09&1.00E+04&2.50E+04\\\hline
-3.74E+04&1.83E+09&5.00E+03&3.50E+04\\\hline
-4.24E+04&1.02E+09&5.00E+03&4.00E+04\\\hline
-4.74E+04&1.15E+09&5.00E+03&4.50E+04\\\hline
-5.96E+04&2.35E+09&2.10E+04&5.00E+04\\\hline
-7.54E+04&5.35E+08&9.00E+03&7.10E+04\\\hline
-8.49E+04&4.18E+08&1.00E+04&8.00E+04\\\hline
-9.49E+04&2.59E+08&1.00E+04&9.00E+04\\\hline
-1.26E+05&6.29E+08&6.00E+04&1.00E+05\\\hline
-1.70E+05&7.92E+07&2.00E+04&1.60E+05\\\hline
-1.90E+05&5.44E+07&2.00E+04&1.80E+05\\\hline
-2.24E+05&7.92E+07&5.00E+04&2.00E+05\\\hline
-3.16E+05&7.33E+07&1.50E+05&2.50E+05\\\hline
-4.47E+05&1.27E+07&1.00E+05&4.00E+05\\\hline
+1.58E+02&8.04E+11&1.50E+02&1.00E+02\\\hline
+3.54E+02&3.62E+11&2.50E+02&2.50E+02\\\hline
+7.07E+02&2.33E+11&5.00E+02&5.00E+02\\\hline
+1.41E+03&1.50E+11&1.00E+03&1.00E+03\\\hline
+2.65E+03&8.57E+10&1.50E+03&2.00E+03\\\hline
+4.18E+03&4.59E+10&1.50E+03&3.50E+03\\\hline
+5.96E+03&3.85E+10&2.10E+03&5.00E+03\\\hline
+7.54E+03&1.16E+10&9.00E+02&7.10E+03\\\hline
+8.49E+03&1.02E+10&1.00E+03&8.00E+03\\\hline
+9.49E+03&8.09E+09&1.00E+03&9.00E+03\\\hline
+1.26E+04&3.02E+10&6.00E+03&1.00E+04\\\hline
+1.70E+04&5.77E+09&2.00E+03&1.60E+04\\\hline
+1.90E+04&4.45E+09&2.00E+03&1.80E+04\\\hline
+2.24E+04&8.14E+09&5.00E+03&2.00E+04\\\hline
+2.96E+04&8.87E+09&1.00E+04&2.50E+04\\\hline
+3.74E+04&2.56E+09&5.00E+03&3.50E+04\\\hline
+4.24E+04&1.90E+09&5.00E+03&4.00E+04\\\hline
+4.74E+04&1.43E+09&5.00E+03&4.50E+04\\\hline
+5.96E+04&3.36E+09&2.10E+04&5.00E+04\\\hline
+7.54E+04&7.50E+08&9.00E+03&7.10E+04\\\hline
+8.49E+04&5.95E+08&1.00E+04&8.00E+04\\\hline
+9.49E+04&4.28E+08&1.00E+04&9.00E+04\\\hline
+1.26E+05&1.05E+09&6.00E+04&1.00E+05\\\hline
+1.70E+05&1.32E+08&2.00E+04&1.60E+05\\\hline
+1.90E+05&9.10E+07&2.00E+04&1.80E+05\\\hline
+2.24E+05&1.32E+08&5.00E+04&2.00E+05\\\hline
+3.16E+05&1.23E+08&1.50E+05&2.50E+05\\\hline
+4.47E+05&2.12E+07&1.00E+05&4.00E+05\\\hline
 	\end{tabular}
 \end{table}
 \clearpage % forces the figure to drop before this point
@@ -237,11 +238,11 @@ Table \ref{tab:ESP-PSYCHIC_2-year_subL1} shows the down-selected energy bins tha
 \subsection{Low-Energy Solar Wind}
 \label{ssec:natenv-Low-Energy Solar Wind}
 
-To compute the low-energy solar wind plasma contribution of the environment (assumed at 1 AU), the L2-CPE V1.3 software package was used. The proton fluence was computed with the setup shown in Figure \ref{fig:L2-CPE-Setup}. Other percentiles that are automatically calculated are $5\%$, $50\%$, $95\%$, and the maximum, mean, and minimum fluxes for each energy bin (see Listing \ref{lst:FLX_PTNXPOS_SWMX_IMP} in Appendix \ref{App:Raw L2-CPE output of the Interplanetary Proton Environment}). Table \ref{tab:p95_sunward_solarwind_IMP} shows the reduced data in the same format as Table \ref{tab:ESP-PSYCHIC_2-year_subL1}. The $95\%$ is used in accordance with DSNE (see the technical notes at the end of Section 3.3.1). The sunward facing flux is used and assumed isotropically as worst-case. 
+To compute the low-energy solar wind plasma contribution of the environment (assumed at 1 AU), the L2-CPE V1.3 software package was used. The proton fluence was computed with the setup shown in Figure \ref{fig:L2-CPE-Setup}. Other percentiles that are automatically calculated are $5\%$, $50\%$, $95\%$, and the maximum, mean, and minimum fluxes for each energy bin (see Listing \ref{lst:FLX_PTNXPOS_SWMX_IMP} in Appendix \ref{App:Raw L2-CPE output of the Interplanetary Proton Environment}). Table \ref{tab:p95_sunward_solarwind_IMP} shows the reduced data in the same format as Table \ref{tab:ESP-PSYCHIC_2-year_subL1}. The $95\%$ is used in accordance with DSNE (see the technical notes at the end of Section 3.3.1). The sunward facing flux is used and assumed to be isotropic as worst-case. 
 
 \begin{figure}[htbp!]
 	\centering
-	\includegraphics[width=0.95\textwidth]{../L2CPE/L2-CPE-Setup.PNG}
+	\includegraphics[width=0.75\textwidth]{../L2CPE/L2-CPE-Setup.PNG}
 	\caption{Screen shot of the setup used in computing the low-energy proton flux environment in L2-CPE.}\label{fig:L2-CPE-Setup}
 \end{figure}
 
@@ -249,7 +250,7 @@ To compute the low-energy solar wind plasma contribution of the environment (ass
 
 
 \begin{table}[!h]\centering
-	\caption{The $95\%$ sunward solar wind environment from L2-CPE for 2 years.}\label{tab:p95_sunward_solarwind_IMP}
+	\caption{The $95\%$ sunward solar wind environment from L2-CPE for 2 years. The energy center $=\sqrt{\text{bin left edge}\times\text{bin right edge}.}$}\label{tab:p95_sunward_solarwind_IMP}
 	\begin{tabular}{|c | c | c | c |}\hline
 		Energy Center (keV) & Bin Flux (\#/cm$^2$) & Bin Width (keV) & Bin Left Edge (keV) \\\hline
 1.34E-03&4.97E+09&8.00E-04&1.00E-03\\\hline

@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import glob
 
 #  python .\computeDose.py DSNE DSNE DSNE_Table_3.3.1.10.2-1 DSNE_Table_3.3.1.10.2-1.txt angleWeights.txt 1.42E-3
-#  python .\computeDose.py DSNE ESP-PSYCHIC ESP-PSYCHIC_2-year_subL1 ESP-PSYCHIC_2-year_subL1.txt angleWeights.txt 1.42E-3
+#  python .\computeDose.py DSNE ESP-PSYCHIC ESP-PSYCHIC_totalfluence_2-year_subL1 ESP-PSYCHIC_totalfluence_2-year_subL1.txt angleWeights.txt 1.42E-3
 #  python .\computeDose.py L2CPE L2CPE L2-CPE_2-year_95-percentile p95_sunward_solarwind_IMP.txt angleWeights.txt 1.42E-3
 
 fileDirectory            = sys.argv[1]
