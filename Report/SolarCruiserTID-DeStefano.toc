@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {2}Mission Trajectory}{2}{section.2}%
 \contentsline {section}{\numberline {3}Materials}{2}{section.3}%
 \contentsline {section}{\numberline {4}Dose-Depth in Kapton}{2}{section.4}%
-\contentsline {section}{\numberline {5}Natural Environment}{5}{section.5}%
+\contentsline {section}{\numberline {5}Natural Environments}{5}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Solar Particle Events}{5}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Low-Energy Solar Wind}{7}{subsection.5.2}%
 \contentsline {section}{\numberline {6}Total Ionizing Dose}{9}{section.6}%

@@ -118,7 +118,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Executive Summary}
 
-The total ionizing dose (TID) in the reaction control device (RCD) material of Solar Cruiser is estimated. A nominal mission length of 2 years is assumed at the sub-Sun-Earth L1 point ($\sim 0.984$ AU). The RCD is assumed to be made of kapton with a thickness of $150\mu$m. Two components of the interplanetary natural environments were incorporated in this study, the solar particle events (SPEs) and the background solar wind. The TID from the high-energy ($>$GeV) cosmic rays was assumed to be negligible due to the thin materials studied in this analysis. It was found that proton energies beyond roughly 13.1 MeV would not depot significant dose into the kapton material since the Bragg peak would be avoided. Taking into account an isotropic environment onto a flat slab (modeled as a cosine law), the TID from SPEs was $1106$~krads whereas the TID from the background solar wind was $23.0$~krads, for a total of $1.129$ Mrads. If an additional factor of $2\times$ is introduced, the estimated TID to $150\mu$m of kapton is $2.258$~Mrads.
+The total ionizing dose (TID) in the reaction control device (RCD) material of Solar Cruiser is estimated. A nominal mission length of 2 years is assumed at the sub-Sun-Earth L1 point ($\sim 0.984$ AU). The RCD is assumed to be made of kapton with a thickness of $150\mu$m. Two components of the interplanetary natural environments were incorporated in this study, the solar particle events (SPEs) and the background solar wind. The TID from the high-energy ($>$GeV) cosmic rays was assumed to be negligible due to the thin materials studied in this analysis. It was found that proton energies beyond roughly 13.1 MeV would not depot significant dose into the kapton material since the Bragg peak would be avoided. Taking into account an isotropic environment onto a flat slab (modeled as a cosine law), the TID from SPEs was $1106$~krads whereas the TID from the background solar wind was $23.0$~krads, for a total of $1.129$~Mrads. If an additional factor of $2\times$ is introduced, the estimated TID to $150\mu$m of kapton is $2.258$~Mrads.
 
 
 
@@ -158,7 +158,7 @@ The SRIM (Stopping and Range of Ions in Solids) software is used to compute the 
 	\caption{Example of TRIM setup.}\label{fig:SRIM_setup}
 \end{figure}
 
-The dose deposited in Kapton depends on the energy of the incident protons. As the energy increases, the depth of the deposited dose increases. In Figure \ref{fig:dose_depth_percentile_vs_energy}, the colored solid curves show the percentiles of dose deposited less than a particular depth, as a function of energy for normally incident protons. For example, the purple curve shows the depth vs. energy at which $95\%$ of the dose is deposited. From Figure~\ref{fig:dose_depth_percentile_vs_energy}, it is clear that the dose is not deposited  uniformly. Thicknesses between the green and blue curves, $45\%$ of the dose is deposited, as well as between the green and purple curves. Therefore, $90\%$ of the dose is deposited between the blue and purple curves. In general, the depth vs. energy profile has a double-power-law shape (depth in angstrom $\angstrom$ and energy in electron volts eV)
+The dose deposited in Kapton depends on the energy of the incident protons. As the energy increases, the depth of the deposited dose increases. In Figure \ref{fig:dose_depth_percentile_vs_energy}, the colored solid curves show the percentiles of dose deposited less than a particular depth, as a function of energy for normally incident protons. For example, the purple curve shows the depth vs.\ energy at which $95\%$ of the dose is deposited. From Figure~\ref{fig:dose_depth_percentile_vs_energy}, it is clear that the dose is not deposited  uniformly. Thicknesses between the green and blue curves, $45\%$ of the dose is deposited, as well as between the green and purple curves. Therefore, $90\%$ of the dose is deposited between the blue and purple curves. In general, the depth vs. energy profile has a double-power-law shape (depth in angstrom $\angstrom$ and energy in electron volts eV)
 \begin{equation}\label{eq:double-power-law}
 	D(E) = \left(\frac{E}{a}\right)^b + \left(\frac{E}{c}\right)^d,
 \end{equation}
@@ -175,10 +175,10 @@ The dotted-dashed curve in Figure \ref{fig:dose_depth_percentile_vs_energy} show
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Natural Environment}
+\section{Natural Environments}
 \label{sec:Natural Environment}
 
-The natural environments for the RCD of Solar Cruiser are separated into a mid-energy component (solar energetic particles, Section~\ref{ssec:natenv-Solar Particle Events}) and a low-energy component (background solar wind, Section~\ref{ssec:natenv-Low-Energy Solar Wind}). The high-energy component (galactic cosmic rays, $> \text{GeV}$) are omitted because of the thin materials studied in this analysis. In general, for an isotropic proton environment with energies greater than $\sim 4$~MeV (see Equation~\eqref{eq:double-power-law}), the particles do not deposit a significant amount of energy in $150 \mu$m Kapton (i.e., the Bragg peak has not been reached yet).
+The natural environments for the RCD of Solar Cruiser are separated into a mid-energy component (solar energetic particles, Section~\ref{ssec:natenv-Solar Particle Events}) and a low-energy component (background solar wind, Section~\ref{ssec:natenv-Low-Energy Solar Wind}). The high-energy component (galactic cosmic rays, $> \text{GeV}$) are omitted because of the thin materials studied in this analysis. In general, for an isotropic proton environment with energies greater than $\sim 13.1$~MeV (see Equation~\eqref{eq:E_5perc}), the particles do not deposit a significant amount of energy in $150 \mu$m Kapton (i.e., the Bragg peak has not been reached yet).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -303,11 +303,11 @@ The isotropic flux for a particular energy and incident angle $\Phi(E,\theta)$ c
 	\Phi(E,\theta) &= [\Phi(E_i) - \Phi(E_{i+1})] \frac{\cos(2\theta_i) - \cos(2\theta_{i+1})}{2},\nonumber\\
 	&= [\Phi(E_i) - \Phi(E_{i+1})] w_i,
 \end{align}
-where $E = \sqrt{E_i E_{i+1}}$, $\theta = (\theta_i + \theta_{i+1})/2$, and $\Phi(E_i)$ is the integral flux at energy $E_i$ (e.g., Section \ref{sec:Natural Environment}). The TRIM simulation is ran using $E$ and $\theta$ as centered values in the energy-angle bin. The angular weight term follows from the integral
+where $E = \sqrt{E_i E_{i+1}}$, $\theta = (\theta_i + \theta_{i+1})/2$, and $\Phi(E_i)$ is the integral flux at energy $E_i$ (e.g., Section \ref{sec:Natural Environment}). The TRIM simulation is run using $E$ and $\theta$ as centered values in the energy-angle bin. The angular weight term follows from the integral
 \begin{equation}
 	w_i = 2\int_{\theta_i}^{\theta_{i+1}}d\theta\sin\theta\cos\theta = \frac{\cos(2\theta_i) - \cos(2\theta_{i+1})}{2},
 \end{equation}
-were it is assumed that the incident angle $\theta$ ranges\footnote{Initially, the range of the incident angle is from $-90^\circ$ to $90^\circ$, but it is assumed the dose profiles will be symmetric about $0^\circ$.} from $0^\circ$ to $90^\circ$, hence the factor of $2$. In this analysis, the range of incident angles $\theta$ are given in Table \ref{tab:incidentAngleBins}.
+where it is assumed that the incident angle $\theta$ ranges\footnote{Initially, the range of the incident angle is from $-90^\circ$ to $90^\circ$, but it is assumed the dose profiles will be symmetric about $0^\circ$.} from $0^\circ$ to $90^\circ$, hence the factor of $2$. In this analysis, the range of incident angles $\theta$ are given in Table \ref{tab:incidentAngleBins}.
 
 \begin{table}[h]\centering
 	\caption{Angular weight factors $w_i$ where $\sum_i w_i = 1$. The $\theta_i$ and $\theta_{i+1}$ are bin edges where $\theta$ is taken as the approximate bin center.}\label{tab:incidentAngleBins}
@@ -322,7 +322,7 @@ were it is assumed that the incident angle $\theta$ ranges\footnote{Initially, t
 	\end{tabular}
 \end{table}
 
-TID can be computed by saving the ionization file once a sufficient number of test particles are ran. The ionization file contains information about the deposited ionization energy due to the primary ions $D_{\text{ions}}$ and to secondaries $D_{\text{recoils}}$ (called recoils) as a function of target depth. The ionization energy units are in eV per Angstrom per ion. To convert the deposited energy into rads, as a function of incident ion energy, angle and deposited depth, the following conversion equation is used
+TID can be computed by saving the ionization file once a sufficient number of test particles are run. The ionization file contains information about the deposited ionization energy due to the primary ions $D_{\text{ions}}$ and to secondaries $D_{\text{recoils}}$ (called recoils) as a function of target depth. The ionization energy units are in eV per Angstrom per ion. To convert the deposited energy into rads, as a function of incident ion energy, angle and deposited depth, the following conversion equation is used
 \begin{equation}
 	D(E,\theta,r) = [D_{\text{ions}} + D_{\text{recoils}}](E,\theta,r) \times \frac{10^8 \text{ \si{\angstrom}}}{\text{cm}} \times \frac{1.60218\times 10^{-19} \text{ J}}{\text{eV}} \times \frac{\Phi(E,\theta)}{\rho[\text{kg cm$^{-3}$}]} ,
 \end{equation}
@@ -332,12 +332,12 @@ In Sections \ref{ssec:TID-Solar Particle Events} and \ref{ssec:TID-Low-Energy So
 
 The integral dose vs.\ depth curves shown in Figures \ref{fig:ESP-PSYCHIC_totalfluence_2-year_subL1_Integral_Dose_vs_Depth} and \ref{fig:L2-CPE_2-year_95-percentile_Integral_Dose_vs_Depth} can be interpreted as the dose deposited up to a particular depth (i.e., at that depth $d$ or less than $d$ towards the front facing surface).
 
-In terms of energy, the integral dose vs. energy curves displayed in Figures \ref{fig:ESP-PSYCHIC_totalfluence_2-year_subL1_Integral_Dose_vs_Energy} and \ref{fig:L2-CPE_2-year_95-percentile_Integral_Dose_vs_Energy} show the TID from particles incident with a particular energy $E$ or greater. Since an isotropic flux environment is simulated, a clear break in the energy spectrum is not exactly seen. However, it is clear from the differential dose vs.\ energy plots (Figures \ref{fig:ESP-PSYCHIC_totalfluence_2-year_subL1_Differential_Dose_vs_Energy} and \ref{fig:L2-CPE_2-year_95-percentile_Differential_Dose_vs_Energy}) that the slope starts to fall off at around $E_{\text{crit}}=4$ MeV. This value of  $E_{\text{crit}}$ makes sense, because for $150 \mu$m of Kapton at the $99$ percentile of dose deposited, the corresponding energy is about 3.7 MeV. That is, using the fit parameters from Table \ref{tab:double-power-law-parameters} for the $99$ percentile, omitting the low-energy terms ($a$ and $b$), the energy can be solved as
+In terms of energy, the integral dose vs. energy curves displayed in Figures \ref{fig:ESP-PSYCHIC_totalfluence_2-year_subL1_Integral_Dose_vs_Energy} and \ref{fig:L2-CPE_2-year_95-percentile_Integral_Dose_vs_Energy} show the TID from particles incident with a particular energy $E$ or greater. Since an isotropic flux environment is simulated, a clear break in the energy spectrum is not exactly seen. However, it is clear from the differential dose vs.\ energy plots (Figures \ref{fig:ESP-PSYCHIC_totalfluence_2-year_subL1_Differential_Dose_vs_Energy} and \ref{fig:L2-CPE_2-year_95-percentile_Differential_Dose_vs_Energy}) that the slope starts to fall off at around $E_{\text{crit}}=4$ MeV. This value of  $E_{\text{crit}}$ makes sense, because for $150 \mu$m of Kapton at the $99$ percentile of dose deposited, the corresponding energy is about $3.7$ MeV. That is, using the fit parameters from Table \ref{tab:double-power-law-parameters} for the $99$ percentile, omitting the low-energy terms ($a$ and $b$), the energy can be solved as
 \begin{equation}
 	E_{99\% \text{ dose}} = 1.393 \text{ keV} (D/ 1 \angstrom)^{0.554},
 \end{equation}
 where $D$ is the thickness of the material (valid for $1 \mu$m $< D < 1$m) and $E$ is the critical energy. For the upper limit of incident energy to depot less than $5\%$ of the total dose, the following equation can be used
-\begin{equation}
+\begin{equation}\label{eq:E_5perc}
 	E_{5\% \text{ dose}} = 4.543 \text{ keV} (D/ 1 \angstrom)^{0.560},
 \end{equation}
 giving $E_{5\% \text{ dose}} = 13.1$ MeV for $D = 150\mu$m.
