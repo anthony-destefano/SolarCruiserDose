@@ -14,4 +14,4 @@
 \contentsline {subsubsection}{\numberline {6.2.2}Total Ionizing Dose vs.\ Proton Energy}{17}{subsubsection.6.2.2}%
 \contentsline {section}{\numberline {7}Results}{19}{section.7}%
 \contentsline {section}{\numberline {A}Dose Percentile-Depth vs. Energy Parameters Fits}{20}{appendix.A}%
-\contentsline {section}{\numberline {B}Raw L2-CPE output of the Interplanetary Proton Environment}{20}{appendix.B}%
+\contentsline {section}{\numberline {B}Raw L2-CPE output of the Interplanetary Proton Environment}{21}{appendix.B}%
