@@ -6,8 +6,12 @@
 \contentsline {subsection}{\numberline {5.1}Solar Particle Events}{5}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Low-Energy Solar Wind}{7}{subsection.5.2}%
 \contentsline {section}{\numberline {6}Total Ionizing Dose}{9}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Solar Particle Events}{9}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Low-Energy Solar Wind}{9}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Results}{9}{section.7}%
-\contentsline {section}{\numberline {A}Dose Percentile-Depth vs. Energy Parameters Fits}{9}{appendix.A}%
-\contentsline {section}{\numberline {B}Raw L2-CPE output of the Interplanetary Proton Environment}{9}{appendix.B}%
+\contentsline {subsection}{\numberline {6.1}Solar Particle Events}{10}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Total Ionizing Dose vs.\ Material Depth}{11}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Total Ionizing Dose vs.\ Proton Energy}{13}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}Low-Energy Solar Wind}{15}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Total Ionizing Dose vs.\ Material Depth}{15}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Total Ionizing Dose vs.\ Proton Energy}{17}{subsubsection.6.2.2}%
+\contentsline {section}{\numberline {7}Results}{19}{section.7}%
+\contentsline {section}{\numberline {A}Dose Percentile-Depth vs. Energy Parameters Fits}{20}{appendix.A}%
+\contentsline {section}{\numberline {B}Raw L2-CPE output of the Interplanetary Proton Environment}{20}{appendix.B}%

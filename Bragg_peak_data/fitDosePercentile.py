@@ -10,8 +10,12 @@ import glob
 def double_power_law(x, a, b, c, d):
 	return np.log10((10.**x / a)**b + (10.**x / c)**d)
 
+def ret_double_power_law(x, a, b, c, d):
+	return (x / a)**b + (x / c)**d
 
 #N = len(sys.argv) - 2
+
+# python .\fitDosePercentile.py .\percentiles.txt
 
 percentile_list_filename = sys.argv[1]
 
@@ -31,7 +35,12 @@ for i in range(0, N):
 
 	fit_vals = np.append(fit_vals, [popt])
 
+	plt.loglog(E, depth, label=filename)
+	plt.loglog(E, ret_double_power_law(E, popt[0], popt[1], popt[2], popt[3]), label=str(popt) + '  fit to ' + filename)
 	#print(popt)
+
+plt.legend()
+plt.show()
 
 #print(fit_vals.reshape((N, 4)))
 fit_vals = fit_vals.reshape((N, 4))
