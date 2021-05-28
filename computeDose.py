@@ -10,6 +10,10 @@ import glob
 #  python .\computeDose.py DSNE ESP-PSYCHIC ESP-PSYCHIC_totalfluence_2-year_subL1 ESP-PSYCHIC_totalfluence_2-year_subL1.txt angleWeights.txt 1.42E-3
 #  python .\computeDose.py L2CPE L2CPE L2-CPE_2-year_95-percentile p95_sunward_solarwind_IMP.txt angleWeights.txt 1.42E-3
 
+
+#  python .\computeDose.py DSNE ESP-PSYCHIC ESP-PSYCHIC_totalfluence_11-month_subL1 ESP-PSYCHIC_totalfluence_11-month_subL1.txt angleWeights.txt 1.42E-3
+#  python .\computeDose.py L2CPE L2CPE L2-CPE_11-month_95-percentile p95_sunward_solarwind_IMP_11month.txt angleWeights.txt 1.42E-3
+
 fileDirectory            = sys.argv[1]
 energy_angleDirectory    = sys.argv[2]
 outputPrefix             = sys.argv[3]
