@@ -3,7 +3,7 @@ TITLE
 Kapton 150.0 microns with L2-CPE V1.3 electron environment
 GEOMETRY 1
 
-4 50 0.15 * Kapton as RCD (cm)
+4 50 0.015 * Kapton as RCD (cm)
 SPECTRUM 51
 * CDF converted from FLX_ELE_95_SWMX_IMP
 * Normalization constant = 4.0237256735e+09 #/cm^2/sec
@@ -112,9 +112,9 @@ SPECTRUM 51
 1.e-06
 
 DIRECTION
- COSINE-LAW
+ COSINE-LAW 0.
 CUTOFFS 0.0006379724 0.001 * electron and photon cut-offs (MeV)
 
 * run size options
-HISTORIES-PER-BATCH 430000
+HISTORIES-PER-BATCH 500000
 BATCHES 32000

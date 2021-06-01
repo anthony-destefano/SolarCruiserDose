@@ -5,7 +5,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import glob
 
-# python .\convert_L2CPE_to_ITS_input.py FLX_ELE SWMX_IMP 95 50 50 150 run01 6.379724E-04 1.0E-03 50000 32000
+# python .\convert_L2CPE_to_ITS_input.py FLX_ELE SWMX_IMP 95 50 50 150 run01 6.379724E-04 1.0E-03 500000 32000
+
+#  mpiexec -n 4 .\itstigp2_mpi.exe ..\L2CPE_Electrons\FLX_ELE_95_SWMX_IMP_Kapton_150um_run01.inp FLX_ELE_95_SWMX_IMP_Kapton_150um_run02.out
 
 particle_type        = sys.argv[1] # FLX_ELE
 solar_cycle_data_set = sys.argv[2] # SWMX_IMP
@@ -81,7 +83,7 @@ with open(ITS_input_filename, 'w') as ITS_f:
 	print('Kapton ' + str(ITS_materal_thickness) + ' microns with L2-CPE V1.3 electron environment', file=ITS_f)
 	print('GEOMETRY 1\n', file=ITS_f)
 
-	print('4 ' + str(ITS_material_bins) + ' ' + str(ITS_materal_thickness/1000.) + ' * Kapton as RCD (cm)', file=ITS_f)
+	print('4 ' + str(ITS_material_bins) + ' ' + str(ITS_materal_thickness/10000.) + ' * Kapton as RCD (cm)', file=ITS_f)
 	print('SPECTRUM ' + str(NE+1), file=ITS_f)
 	print('* CDF converted from ' + particle_type + '_' + percentile + '_' + solar_cycle_data_set, file=ITS_f)
 	print('* Normalization constant = ' + str(np.format_float_scientific(flux_norm, precision=10)) + ' #/cm^2/sec', file=ITS_f)
@@ -101,7 +103,7 @@ with open(ITS_input_filename, 'w') as ITS_f:
 	print(np.format_float_scientific(E1[0]/1000., precision=10), file=ITS_f) # units of MeV, not keV
 
 	print('\nDIRECTION', file=ITS_f)
-	print(' COSINE-LAW', file=ITS_f)
+	print(' COSINE-LAW 0.', file=ITS_f)
 	print('CUTOFFS ' + str(ITS_electron_cutoff) + ' ' + str(ITS_photon_cutoff) + ' * electron and photon cut-offs (MeV)\n', file=ITS_f)
 
 	print('* run size options', file=ITS_f)
