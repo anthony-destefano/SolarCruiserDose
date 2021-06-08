@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  14 MAY 2021 14:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  7 JUN 2021 19:55
 entering extended mode
 **./SolarCruiserTID_11months-DeStefano.tex
 (SolarCruiserTID_11months-DeStefano.tex
@@ -1242,6 +1242,8 @@ Overfull \hbox (1.78635pt too wide) in paragraph at lines 2--2
 us dose-depth per-centiles. 
  []
 
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 3.
 )
 \tf@lof=\write6
 \openout6 = `SolarCruiserTID_11months-DeStefano.lof'.
@@ -1255,8 +1257,6 @@ us dose-depth per-centiles.
 \tf@lol=\write8
 \openout8 = `SolarCruiserTID_11months-DeStefano.lol'.
 
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 106.
  [2] [1
 
 ]
@@ -1264,13 +1264,13 @@ Overfull \hbox (16.13623pt too wide) in paragraph at lines 140--147
  [][] 
  []
 
-<../SRIM_setup.PNG, id=171, 591.71063pt x 485.56406pt>
+<../SRIM_setup.PNG, id=182, 591.71063pt x 485.56406pt>
 File: ../SRIM_setup.PNG Graphic file (type png)
 <use ../SRIM_setup.PNG>
 Package pdftex.def Info: ../SRIM_setup.PNG  used on input line 157.
 (pdftex.def)             Requested size: 375.0pt x 307.73701pt.
 [2] [3 <../SRIM_setup.PNG>]
-<../Bragg_peak_data/dose_depth_percentile_vs_energy.png, id=188, 578.16pt x 505
+<../Bragg_peak_data/dose_depth_percentile_vs_energy.png, id=199, 578.16pt x 505
 .89pt>
 File: ../Bragg_peak_data/dose_depth_percentile_vs_energy.png Graphic file (type
  png)
@@ -1278,9 +1278,21 @@ File: ../Bragg_peak_data/dose_depth_percentile_vs_energy.png Graphic file (type
 Package pdftex.def Info: ../Bragg_peak_data/dose_depth_percentile_vs_energy.png
   used on input line 169.
 (pdftex.def)             Requested size: 356.24886pt x 311.71873pt.
- [4 <../Bragg_peak_data/dose_depth_percentile_vs_energy.png>]
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-91.
+<../Bragg_peak_data/comparison_dose_vs_energy.png, id=201, 462.528pt x 346.896p
+t>
+File: ../Bragg_peak_data/comparison_dose_vs_energy.png Graphic file (type png)
+<use ../Bragg_peak_data/comparison_dose_vs_energy.png>
+Package pdftex.def Info: ../Bragg_peak_data/comparison_dose_vs_energy.png  used
+ on input line 178.
+(pdftex.def)             Requested size: 337.49771pt x 253.13669pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <../Bragg_peak_data/dose_depth_percentile_vs_energy.png>] [5 <../Bragg_peak_
+data/comparison_dose_vs_energy.png>]
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
+02.
 
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1phv.f
 d"
@@ -1309,18 +1321,20 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmis
 c.sty"
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-) [5] (../ESP-PSYCHIC/ESP-PSYCHIC_totalfluence_11-month_subL1.txt)
-[6]
-<../L2CPE/L2-CPE-Setup.PNG, id=248, 232.87pt x 243.40938pt>
+) [6
+
+] (../ESP-PSYCHIC/ESP-PSYCHIC_totalfluence_11-month_subL1.txt)
+[7]
+<../L2CPE/L2-CPE-Setup.PNG, id=285, 232.87pt x 243.40938pt>
 File: ../L2CPE/L2-CPE-Setup.PNG Graphic file (type png)
 <use ../L2CPE/L2-CPE-Setup.PNG>
-Package pdftex.def Info: ../L2CPE/L2-CPE-Setup.PNG  used on input line 256.
+Package pdftex.def Info: ../L2CPE/L2-CPE-Setup.PNG  used on input line 267.
 (pdftex.def)             Requested size: 281.25pt x 294.00998pt.
- (../L2CPE/p95_sunward_solarwind_IMP_11month.txt [7
+ (../L2CPE/p95_sunward_solarwind_IMP_11month.txt [8
 
- <../L2CPE/L2-CPE-Setup.PNG>]) [8]
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 33
-3.
+ <../L2CPE/L2-CPE-Setup.PNG>]) [9]
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 34
+5.
 
 ("C:\Users\adestefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1phv.fd
 "
@@ -1346,98 +1360,105 @@ LaTeX Warning: Font shape declaration has incorrect series value `mc'.
                It should not contain an `m'! Please correct it.
                Found on input line 46.
 
-) [9
+)
+Overfull \hbox (8.98973pt too wide) detected at line 345
+[]
+ []
 
-] [10]
+[10
+
+] [11]
 <../ESP-PSYCHIC_totalfluence_11-month_subL1_Differential_Dose_vs_Depth.png, id=
-327, 410.67427pt x 354.66502pt>
+367, 410.67427pt x 354.66502pt>
 File: ../ESP-PSYCHIC_totalfluence_11-month_subL1_Differential_Dose_vs_Depth.png
  Graphic file (type png)
 <use ../ESP-PSYCHIC_totalfluence_11-month_subL1_Differential_Dose_vs_Depth.png>
 
 Package pdftex.def Info: ../ESP-PSYCHIC_totalfluence_11-month_subL1_Differentia
-l_Dose_vs_Depth.png  used on input line 365.
+l_Dose_vs_Depth.png  used on input line 376.
 (pdftex.def)             Requested size: 356.24886pt x 307.67397pt.
-<../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Depth.png, id=328,
+<../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Depth.png, id=368,
  427.56738pt x 354.66502pt>
 File: ../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Depth.png Gra
 phic file (type png)
 <use ../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Depth.png>
 Package pdftex.def Info: ../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Do
-se_vs_Depth.png  used on input line 371.
+se_vs_Depth.png  used on input line 382.
 (pdftex.def)             Requested size: 356.24886pt x 295.50836pt.
- [11 <../ESP-PSYCHIC_totalfluence_11-month_subL1_Differential_Dose_vs_Depth.png
->] [12 <../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Depth.png>]
+ [12 <../ESP-PSYCHIC_totalfluence_11-month_subL1_Differential_Dose_vs_Depth.png
+>] [13 <../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Depth.png>]
 <../ESP-PSYCHIC_totalfluence_11-month_subL1_Differential_Dose_vs_Energy.png, id
-=340, 416.54622pt x 354.75536pt>
+=379, 416.54622pt x 354.75536pt>
 File: ../ESP-PSYCHIC_totalfluence_11-month_subL1_Differential_Dose_vs_Energy.pn
 g Graphic file (type png)
 <use ../ESP-PSYCHIC_totalfluence_11-month_subL1_Differential_Dose_vs_Energy.png
 >
 Package pdftex.def Info: ../ESP-PSYCHIC_totalfluence_11-month_subL1_Differentia
-l_Dose_vs_Energy.png  used on input line 382.
+l_Dose_vs_Energy.png  used on input line 393.
 (pdftex.def)             Requested size: 356.24886pt x 303.41098pt.
-<../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Energy.png, id=341
+<../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Energy.png, id=380
 , 410.67427pt x 354.75536pt>
 File: ../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Energy.png Gr
 aphic file (type png)
 <use ../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Energy.png>
 Package pdftex.def Info: ../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Do
-se_vs_Energy.png  used on input line 388.
+se_vs_Energy.png  used on input line 399.
 (pdftex.def)             Requested size: 356.24886pt x 307.7523pt.
- [13
+ [14
 
  <../ESP-PSYCHIC_totalfluence_11-month_subL1_Differential_Dose_vs_Energy.png>] 
-[14 <../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Energy.png>]
-<../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Depth.png, id=356, 410.4
+[15 <../ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Energy.png>]
+<../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Depth.png, id=395, 410.4
 936pt x 354.66502pt>
 File: ../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Depth.png Graphic f
 ile (type png)
 <use ../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Depth.png>
 Package pdftex.def Info: ../L2-CPE_11-month_95-percentile_Differential_Dose_vs_
-Depth.png  used on input line 406.
+Depth.png  used on input line 417.
 (pdftex.def)             Requested size: 356.24886pt x 307.81467pt.
-<../L2-CPE_11-month_95-percentile_Integral_Dose_vs_Depth.png, id=357, 427.65773
+<../L2-CPE_11-month_95-percentile_Integral_Dose_vs_Depth.png, id=396, 427.65773
 pt x 354.66502pt>
 File: ../L2-CPE_11-month_95-percentile_Integral_Dose_vs_Depth.png Graphic file 
 (type png)
 <use ../L2-CPE_11-month_95-percentile_Integral_Dose_vs_Depth.png>
 Package pdftex.def Info: ../L2-CPE_11-month_95-percentile_Integral_Dose_vs_Dept
-h.png  used on input line 412.
+h.png  used on input line 423.
 (pdftex.def)             Requested size: 356.24886pt x 295.44342pt.
- [15
+ [16
 
- <../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Depth.png>] [16 <../L2-
+ <../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Depth.png>] [17 <../L2-
 CPE_11-month_95-percentile_Integral_Dose_vs_Depth.png>]
-<../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Energy.png, id=368, 410.
+<../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Energy.png, id=408, 410.
 58394pt x 354.75536pt>
 File: ../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Energy.png Graphic 
 file (type png)
 <use ../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Energy.png>
 Package pdftex.def Info: ../L2-CPE_11-month_95-percentile_Differential_Dose_vs_
-Energy.png  used on input line 424.
+Energy.png  used on input line 435.
 (pdftex.def)             Requested size: 356.24886pt x 307.82268pt.
-<../L2-CPE_11-month_95-percentile_Integral_Dose_vs_Energy.png, id=369, 415.0104
+<../L2-CPE_11-month_95-percentile_Integral_Dose_vs_Energy.png, id=409, 415.0104
 7pt x 354.75536pt>
 File: ../L2-CPE_11-month_95-percentile_Integral_Dose_vs_Energy.png Graphic file
  (type png)
 <use ../L2-CPE_11-month_95-percentile_Integral_Dose_vs_Energy.png>
 Package pdftex.def Info: ../L2-CPE_11-month_95-percentile_Integral_Dose_vs_Ener
-gy.png  used on input line 430.
+gy.png  used on input line 441.
 (pdftex.def)             Requested size: 356.24886pt x 304.53151pt.
+ [18
 
-[17
-
- <../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Energy.png>]
-[18 <../L2-CPE_11-month_95-percentile_Integral_Dose_vs_Energy.png>]
-Overfull \hbox (0.70874pt too wide) in paragraph at lines 442--443
+ <../L2-CPE_11-month_95-percentile_Differential_Dose_vs_Energy.png>] [19 <../L2
+-CPE_11-month_95-percentile_Integral_Dose_vs_Energy.png>]
+Overfull \hbox (0.70874pt too wide) in paragraph at lines 453--454
 []\OT1/phv/m/n/10 Before the low-energy back-ground so-lar wind was an-a-lyzed,
  it was un-clear whether
  []
 
-[19
+[20
 
-] [20] (../L2CPE/FLX_PTNXPOS_SWMX_IMP.DAT
+] (SolarCruiserTID_11months-DeStefano.bbl) [21
+
+] [22]
+(../L2CPE/FLX_PTNXPOS_SWMX_IMP.DAT
 LaTeX Font Info:    Trying to load font information for OML+phv on input line 6
 .
 
@@ -1447,7 +1468,7 @@ File: omlphv.fd
 )
 LaTeX Font Info:    Font shape `OML/phv/m/n' in size <8> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 6.
- [21] [22]
+ [23] [24]
 Overfull \hbox (77.0044pt too wide) in paragraph at lines 93--94
 [][] 
  []
@@ -1457,25 +1478,25 @@ Overfull \hbox (77.0044pt too wide) in paragraph at lines 93--94
 Package caption Warning: Unused \captionsetup[sub] on input line 28.
 See the caption package documentation for explanation.
 
-[23]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 496.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 496.
+[25]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 511.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 511.
  (SolarCruiserTID_11months-DeStefano.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 496.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 496.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 511.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 511.
 Package rerunfilecheck Info: File `SolarCruiserTID_11months-DeStefano.out' has 
 not changed.
-(rerunfilecheck)             Checksum: 2C7A2A9F015EA992C5068E190D244030;1207.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 496.
+(rerunfilecheck)             Checksum: EAF890C92558696A3FB7AD7A39CE90C7;1255.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 511.
  ) 
 Here is how much of TeX's memory you used:
- 34848 strings out of 481292
- 822146 string characters out of 2906380
- 1743462 words of memory out of 3000000
- 49505 multiletter control sequences out of 15000+200000
+ 34879 strings out of 481292
+ 823069 string characters out of 2906380
+ 1744045 words of memory out of 3000000
+ 49524 multiletter control sequences out of 15000+200000
  564960 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,98p,1163b,2372s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,18n,98p,1163b,2372s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\adestefa\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/d
 pi600\matha6.pk> <C:\Users\adestefa\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/pu
 blic/mathabx/dpi600\matha5.pk> <C:\Users\adestefa\AppData\Local\MiKTeX\2.9\font
@@ -1500,10 +1521,10 @@ b><C:/Users/adestefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic
 /uhvb8a.pfb><C:/Users/adestefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
 w/helvetic/uhvr8a.pfb><C:/Users/adestefa/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/urw/helvetic/uhvro8a.pfb>
-Output written on SolarCruiserTID_11months-DeStefano.pdf (25 pages, 5060173 byt
+Output written on SolarCruiserTID_11months-DeStefano.pdf (27 pages, 5533190 byt
 es).
 PDF statistics:
- 636 PDF objects out of 1000 (max. 8388607)
- 222 named destinations out of 1000 (max. 500000)
- 204 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 681 PDF objects out of 1000 (max. 8388607)
+ 230 named destinations out of 1000 (max. 500000)
+ 217 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -173,6 +173,17 @@ where $a$ is the low-energy scale, $c$ is the high-energy scale, and $b$ \& $d$ 
 
 The dotted-dashed curve in Figure \ref{fig:dose_depth_percentile_vs_energy} shows the total dose deposited per fluence as a function of energy. Basically, this curve can be thought of as the dose cross-section of Kapton for normally incident protons. One way to find the total dose for a given energy spectrum, one could convolute the dose cross-section with the differential energy spectrum, taking into account the depth percentile for a particular thickness of Kapton material. However, a more direct method to find the total dose is used in the following sections.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../Bragg_peak_data/comparison_dose_vs_energy.png}
+	\caption{The dose per fluence of protons is compared between SRIM (blue circles) and \cite{pelliccioni2000overview} (orange triangles).}\label{fig:comparison_dose_vs_energy}
+\end{figure}
+
+In Figure \ref{fig:comparison_dose_vs_energy}, Table A2.7 of \cite{pelliccioni2000overview} is compared with the dose per fluence curve from Figure \ref{fig:dose_depth_percentile_vs_energy} for incident protons. The ambient dose equivalent per unit fluence given in \cite{pelliccioni2000overview} is derived from the Monte Carlo code FLUKA \citep{battistoni2015overview}, termed \textit{Pelliccioni conversion coefficients}\footnote{Used in the MULASSIS code, see \url{https://www.spenvis.oma.be/help/models/smul.html}.}. Both electronic and nuclear interactions are taken into account in the FLUKA code, in contrast with TRIM only handling electronic interactions. This difference in interactions explains why the dose per fluence curves deviate at the last blue marker at $0.41$ GeV.
+
+The agreement shown in Figure \ref{fig:comparison_dose_vs_energy} also merits the factor of $0.01$ required in converting the energy deposited to equivalent dose in Equation \eqref{eq:Edep_to_dose}.
+
+\clearpage % forces the figure to drop before this point
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Natural Environments}
@@ -301,7 +312,7 @@ caption={The $95\%$ sunward solar wind environment from L2-CPE for 11 months. Th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Total Ionizing Dose}
 
-The Stopping and Range of Ions in Matter (SRIM) is a group of programs that calculate the stopping and range of ions in matter\footnote{\url{http://www.srim.org/SRIM/SRIMINTRO.htm}}. % The ion stopping and range table calculator in SRIM was used in Section \ref{sssec:ProtonStoppingDistance}.
+The Stopping and Range of Ions in Matter (SRIM) is a group of programs that calculate the stopping and range of ions in matter\footnote{\url{http://www.srim.org/SRIM/SRIMINTRO.htm}} \citep{ziegler2010srim}. % The ion stopping and range table calculator in SRIM was used in Section \ref{sssec:ProtonStoppingDistance}.
 For each run using TRIM (Transport of Ions in Matter), a mono-energetic beam of a single incident angle is used at the environment and transported through a series of predefined layers in a Monte Carlo fashion.
 
 The isotropic flux for a particular energy and incident angle $\Phi(E,\theta)$ can be computed as (using a cosine distribution for an incident isotropic distribution on a flat slab)
@@ -329,10 +340,10 @@ where it is assumed that the incident angle $\theta$ ranges\footnote{Initially, 
 \end{table}
 
 TID can be computed by saving the ionization file once a sufficient number of test particles are run. The ionization file contains information about the deposited ionization energy due to the primary ions $D_{\text{ions}}$ and to secondaries $D_{\text{recoils}}$ (called recoils) as a function of target depth. The ionization energy units are in eV per Angstrom per ion. To convert the deposited energy into rads, as a function of incident ion energy, angle and deposited depth, the following conversion equation is used
-\begin{equation}
-	D(E,\theta,r) = [D_{\text{ions}} + D_{\text{recoils}}](E,\theta,r) \times \frac{10^8 \text{ \si{\angstrom}}}{\text{cm}} \times \frac{1.60218\times 10^{-19} \text{ J}}{\text{eV}} \times \frac{\Phi(E,\theta)}{\rho[\text{kg cm$^{-3}$}]} ,
-\end{equation}
-where $\rho$ is the material density in units of kg cm$^{-3}$.
+\begin{align}\label{eq:Edep_to_dose}
+	D\nonumber&(E,\theta,r)\\&= [D_{\text{ions}} + D_{\text{recoils}}](E,\theta,r) \times \frac{10^8 \text{ \si{\angstrom}}}{\text{cm}} \times \frac{1.60218\times 10^{-19} \text{ J}}{\text{eV}} \times \frac{Q_{\text{SRIM}}\Phi(E,\theta)}{\rho[\text{kg cm$^{-3}$}]}\times \frac{100 \text{ rads}}{\text{J/kg}} ,
+\end{align}
+where $Q_{\text{SRIM}} = 0.01$ and $\rho$ is the material density in units of kg cm$^{-3}$.
 
 In Sections \ref{ssec:TID-Solar Particle Events} and \ref{ssec:TID-Low-Energy Solar Wind}, the dose vs.\ depth and dose vs.\ energy curves are discussed for the solar particle events and low-energy solar wind, respectively. Note that the \textit{rough} nature of the differential dose vs.\ depth curves found in Figures \ref{fig:ESP-PSYCHIC_totalfluence_11-month_subL1_Differential_Dose_vs_Depth} and \ref{fig:L2-CPE_11-month_95-percentile_Differential_Dose_vs_Depth} are due to the finite number of incident energies and angles probed. Since the poorly resolved portion occurs at lower doses, the overall estimated TID should be numerically stable.
 
@@ -442,6 +453,15 @@ The overall total ionizing dose (TID) in $150\mu$m of Kapton (as defined in Sect
 Before the low-energy background solar wind was analyzed, it was unclear whether it would be a driver or not. Due to the thin layer of Kapton, it was expected only the mid- to low-energy component (i.e., $< 13.1$ MeV) would contribute to the TID. However, the results show that the background solar wind component provides only $1.7\%$ of the overall TID.
 
 According to Figure \ref{fig:ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Dose_vs_Depth} for the SPE environment, roughly $20\%$ of the overall TID occurs in the first $3\mu$m of the kapton material, whereas for the background solar wind, Figure \ref{fig:L2-CPE_11-month_95-percentile_Integral_Dose_vs_Depth} shows that roughly $60\%$ of the overall TID occurs in the first $3\mu$m. This is consistent with the fact that the SPE environment has more higher energy protons than the background solar wind environment, and therefore will penetrate further into the kapton material. Given that a majority of the dose is deposited in the outermost layer of kapton, any thin film over the RCD might protect the inner layers from TID, especially due to the background solar wind. 
+
+
+%\section{References}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{agu}
+\bibliography{report}
+
 \newpage
 \appendix
 
@@ -486,11 +506,6 @@ According to Figure \ref{fig:ESP-PSYCHIC_totalfluence_11-month_subL1_Integral_Do
 \lstinputlisting[language=xml,basicstyle=\footnotesize,frame=single,
 caption={The sunward facing flux (worst-case) during solar maximum from IMP8 using L2-CPE.},label=lst:FLX_PTNXPOS_SWMX_IMP]{../L2CPE/FLX_PTNXPOS_SWMX_IMP.DAT}
 
-%\section{References}
-%\cleardoublepage
-%\phantomsection
-%\addcontentsline{toc}{section}{References}
-%\bibliographystyle{agu}
-%\bibliography{report}
+
 
 \end{document}

@@ -51,13 +51,13 @@ for line in fileinput.input(files=glob.glob(ITS_filename)):
         read_flag = 0
         n = 0
         #n_files += 1
-        
-dose = energy_deposit * 1.6021E-13 * fluence # rads/time of fluence used
+# MeV-cm^2/g/# * J/MeV * rads/(J/g)? * #/cm^2-time = rads/time
+dose = energy_deposit * 1.60218E-13 * 1.E3 * fluence # rads/time of fluence used
 
-print(depth)
+#print(depth)
 ITS_filename = ITS_filename.replace('.', '')
 ITS_filename = ITS_filename.replace('\\', '-')
-np.savetxt('doseResults_' + ITS_filename + '.txt', np.c_[depth, dose])
+np.savetxt('doseResults_' + ITS_filename + '.txt', np.c_[depth, dose]) # https://stackoverflow.com/questions/15192847/saving-arrays-as-columns-with-np-savetxt
 
 tot_dose = np.sum(dose)
 cum_dose = np.cumsum(dose)
@@ -66,7 +66,7 @@ depth *= 1.E4 # cm to um
 plt.loglog(depth, dose * areal_density / density)
 plt.xlabel('Depth (microns)')
 plt.ylabel('Differential Dose (rads/micron)')
-plt.title('Differential Dose vs. Depth\n' + plotSubTitle + '\nTotal dose = ' + str(np.round(tot_dose)) + ' rads')
+plt.title('Differential Dose vs. Depth\n' + plotSubTitle + '\nTotal dose = ' + str(np.round(tot_dose/1000.)) + ' krads')
 plt.grid(b=True, which='both') # https://stackoverflow.com/questions/9127434/how-to-create-major-and-minor-gridlines-with-different-linestyles-in-python
 plt.savefig('DifferentialDose_' + ITS_filename + '.png', dpi=800, bbox_inches='tight', pad_inches=0.1)
 
@@ -74,7 +74,7 @@ plt.figure()
 plt.loglog(depth, cum_dose)
 plt.xlabel('Depth (microns)')
 plt.ylabel('Integral Dose (rads < depth)')
-plt.title('Integral Dose vs. Depth\n' + plotSubTitle + '\nTotal dose = ' + str(np.round(tot_dose)) + ' rads')
+plt.title('Integral Dose vs. Depth\n' + plotSubTitle + '\nTotal dose = ' + str(np.round(tot_dose/1000.)) + ' krads')
 plt.grid(b=True, which='both') # https://stackoverflow.com/questions/9127434/how-to-create-major-and-minor-gridlines-with-different-linestyles-in-python
 plt.savefig('IntegralDose_' + ITS_filename + '.png', dpi=800, bbox_inches='tight', pad_inches=0.1)
 
