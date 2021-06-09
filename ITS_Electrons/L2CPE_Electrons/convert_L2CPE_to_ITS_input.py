@@ -103,7 +103,7 @@ with open(ITS_input_filename, 'w') as ITS_f:
 	print(np.format_float_scientific(E1[0]/1000., precision=10), file=ITS_f) # units of MeV, not keV
 
 	print('\nDIRECTION', file=ITS_f)
-	print(' COSINE-LAW 0.', file=ITS_f)
+	print(' COSINE-LAW 0 90', file=ITS_f)
 	print('CUTOFFS ' + str(ITS_electron_cutoff) + ' ' + str(ITS_photon_cutoff) + ' * electron and photon cut-offs (MeV)\n', file=ITS_f)
 
 	print('* run size options', file=ITS_f)

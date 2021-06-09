@@ -150,7 +150,9 @@ The representative material for the Reaction Control Device (RCD) of Solar Cruis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dose-Depth in Kapton}
 
-The SRIM (Stopping and Range of Ions in Solids) software is used to compute the dose in thin materials with no prior shielding. The SRIM software package contains TRIM (the Transport of Ions in Matter), with a screenshot of the setup used in this analysis shown in Figure \ref{fig:SRIM_setup}.
+\subsection{Protons}
+
+The SRIM (Stopping and Range of Ions in Solids) software is used to compute the dose in thin materials with no prior shielding. The SRIM software package contains TRIM (the Transport of Ions in Matter) \citep{ziegler2004srim, ziegler2010srim}, with a screenshot of the setup used in this analysis shown in Figure \ref{fig:SRIM_setup}.
 
 \begin{figure}[htbp!]
 	\centering
@@ -182,6 +184,11 @@ The dotted-dashed curve in Figure \ref{fig:dose_depth_percentile_vs_energy} show
 In Figure \ref{fig:comparison_dose_vs_energy}, Table A2.7 of \cite{pelliccioni2000overview} is compared with the dose per fluence curve from Figure \ref{fig:dose_depth_percentile_vs_energy} for incident protons. The ambient dose equivalent per unit fluence given in \cite{pelliccioni2000overview} is derived from the Monte Carlo code FLUKA \citep{battistoni2015overview}, termed \textit{Pelliccioni conversion coefficients}\footnote{Used in the MULASSIS code, see \url{https://www.spenvis.oma.be/help/models/smul.html}.}. Both electronic and nuclear interactions are taken into account in the FLUKA code, in contrast with TRIM only handling electronic interactions. This difference in interactions explains why the dose per fluence curves deviate at the last blue marker at $0.41$ GeV.
 
 The agreement shown in Figure \ref{fig:comparison_dose_vs_energy} also merits the factor of $0.01$ required in converting the energy deposited to equivalent dose in Equation \eqref{eq:Edep_to_dose}.
+
+
+\subsection{Electrons}
+
+
 
 \clearpage % forces the figure to drop before this point
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -312,7 +319,7 @@ caption={The $95\%$ sunward solar wind environment from L2-CPE for 11 months. Th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Total Ionizing Dose}
 
-The Stopping and Range of Ions in Matter (SRIM) is a group of programs that calculate the stopping and range of ions in matter\footnote{\url{http://www.srim.org/SRIM/SRIMINTRO.htm}} \citep{ziegler2010srim}. % The ion stopping and range table calculator in SRIM was used in Section \ref{sssec:ProtonStoppingDistance}.
+The Stopping and Range of Ions in Matter (SRIM) is a group of programs that calculate the stopping and range of ions in matter\footnote{\url{http://www.srim.org/SRIM/SRIMINTRO.htm}} \citep{ziegler2004srim, ziegler2010srim}. % The ion stopping and range table calculator in SRIM was used in Section \ref{sssec:ProtonStoppingDistance}.
 For each run using TRIM (Transport of Ions in Matter), a mono-energetic beam of a single incident angle is used at the environment and transported through a series of predefined layers in a Monte Carlo fashion.
 
 The isotropic flux for a particular energy and incident angle $\Phi(E,\theta)$ can be computed as (using a cosine distribution for an incident isotropic distribution on a flat slab)

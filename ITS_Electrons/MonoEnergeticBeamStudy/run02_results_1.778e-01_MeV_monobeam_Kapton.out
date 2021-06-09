@@ -1,0 +1,1158 @@
+1 *****************************************
+  *                                       *
+  *             PROGRAM ITS               *
+  * VERSION:  6.4.11                      *
+  * DATE:     FEBRUARY 10, 2010           *
+  *                                       *
+  *           RONALD P. KENSEK            *
+  *           BRIAN C. FRANKE             *
+  *           THOMAS W. LAUB              *
+  *     SANDIA NATIONAL LABORATORIES      *
+  *                                       *
+  *          TELEPHONE       EMAIL        *
+  *KENSEK: 505-845-7642 rpkense@sandia.gov*
+  *FRANKE: 505-845-7609 bcfrank@sandia.gov*
+  *LAUB:   505-844-9142  twlaub@sandia.gov*
+  *       FAX:      505-844-0092          *
+  *                                       *
+  *****************************************
+  *             T I G E R                 *
+  *            P C O D E S                *
+  *               M P I                   *
+  *              R N G 2                  *
+  *****************************************
+  NUMERICS INTERROGATION
+  radix:        2
+                     digits  minexp  maxexp
+  default  integer       31
+  selected long          63
+  default  real          53   -1021    1024
+  selected single        24    -125     128
+  selected double        53   -1021    1024
+  *****************************************
+1***************************
+ *   BEGIN READING INPUT   *
+ ***************************
+ ECHO 1
+ TITLE
+ Kapton 1000000.0 microns with 1.778e-01 MeV mono-energetic electron environment
+ GEOMETRY 1
+ 
+ 4 50 3.52E-02 * Kapton as RCD (cm)
+ ************************* SOURCE ********************************
+ * energy (MeV)
+ ELECTRONS
+ ENERGY 0.1778279410038923
+ 
+ DIRECTION
+  COSINE-LAW 0 90
+ CUTOFFS 0.0006379724 0.001 * electron and photon cut-offs (MeV)
+ 
+ * run size options
+ HISTORIES-PER-BATCH 5000
+ BATCHES 320
+0 EOF ON UNIT 50 BEGIN PROCESSING - INPUT FOR FINAL PROBLEM.
+1****************************************
+ *   BEGIN READING CROSS SECTION DATA   *
+ ****************************************
+0*******************                                                                        ********************
+0NUMBER OF SETS IN FILE =   4
+
+0MATERIAL      DENSITY       DETOUR        I(BL)
+        1  2.70000E+00  7.40081E-01  1.66000E-04
+        Z            A            W
+       13  2.69815E+01  1.00000E+00
+  ITRM  ISGN  ISUB  INAL  ICYC  NCYC  NMAX      EMAX           EMIN           RMAX       MMAX INDEX
+     5     1     5     4     1     8   168  1.0000000E+03  4.7683716E-04  8.1817757E+01    33   121
+
+0MATERIAL      DENSITY       DETOUR        I(BL)
+        2  1.19000E+00  8.67793E-01  7.08716E-05
+        Z            A            W
+        1  1.00794E+00  8.05460E-02
+        6  1.20110E+01  5.99848E-01
+        8  1.59994E+01  3.19606E-01
+  ITRM  ISGN  ISUB  INAL  ICYC  NCYC  NMAX      EMAX           EMIN           RMAX       MMAX INDEX
+     5     1     3     4     1     8   168  1.0000000E+03  4.7683716E-04  1.0885826E+02    33   121
+
+0MATERIAL      DENSITY       DETOUR        I(BL)
+        3  2.15200E+00  8.21140E-01  1.03285E-04
+        Z            A            W
+        6  1.20110E+01  2.40180E-01
+        9  1.89984E+01  7.59820E-01
+  ITRM  ISGN  ISUB  INAL  ICYC  NCYC  NMAX      EMAX           EMIN           RMAX       MMAX INDEX
+     5     1     3     4     1     8   168  1.0000000E+03  4.7683716E-04  1.0427507E+02    33   121
+
+0MATERIAL      DENSITY       DETOUR        I(BL)
+        4  1.42000E+00  8.60273E-01  7.95812E-05
+        Z            A            W
+        1  1.00794E+00  2.63620E-02
+        6  1.20110E+01  6.91133E-01
+        7  1.40067E+01  7.32700E-02
+        8  1.59994E+01  2.09235E-01
+  ITRM  ISGN  ISUB  INAL  ICYC  NCYC  NMAX      EMAX           EMIN           RMAX       MMAX INDEX
+     5     1     3     4     1     8   168  1.0000000E+03  4.7683716E-04  1.1130249E+02    33   121
+0 COLLISION / TOTAL DE/DX RATIOS                                         
+0 CUMULATIVE BREMSSTRAHLUNG CROSS SECTIONS                               
+0 CUMULATIVE BREMSSTRAHLUNG ANGULAR DISTRIBUTIONS                        
+0 LANGAUSS - EQUIPROBABLE ENDPOINTS FOR INTERPOLATION                    
+0 K X-RAY PRODUCTION                                                     
+0 PHOTOELECTRON ANGULAR DISTRIBUTIONS                                    
+0 PAIR ELECTRON ENERGY DIVISION DISTRIBUTION (LEAD)                      
+0*******************
+ *  PROCESS INPUT  *
+ *******************
+1*********************************************************
+ *   COMPARISON OF STORAGE REQUIREMENTS VS ALLOCATIONS   *
+ *********************************************************
+0NUMBER OF MATERIALS ON CROSS SECTION FILE                                    / INMT    =          4  /           4
+ MAXIMUM NUMBER OF ELEMENTS IN A PROBLEM MATERIAL                             / INEM    =          4  /           4
+ LENGTH OF ELECTRON CROSS SECTION ENERGY GRID                                 / INMAX   =        168  /         448
+ ELECTRON ENERGY GRID LENGTH FOR SAMPLING BREMS. PHOTON ENERGY                / IMTOP   =        169  /         449
+ PHOTON ENERGY GRID LENGTH FOR SAMPLING BREMS. PHOTON ENERGY                  / IKTOP   =         89  /          89
+ ELECTRON ANGLE GRID LENGTH FOR SAMPLING ELECTRON SCATTERING ANGLE            / IMMAX   =         33  /          33
+ PHOTON ANGLE GRID LENGTH FOR SAMPLING BREMS. PHOTON ANGLE                    / INPANG  =         21  /          21
+ PHOTON ENERGY GRID LENGTH FOR SAMPLING BREMS. PHOTON ANGLE                   / INRANG  =         34  /          34
+ ELECTRON ENERGY GRID LENGTH FOR SAMPLING BREMS. PHOTON ANGLE                 / INTANG  =         43  /         113
+ PHOTON ENERGY GRID LENGTH FOR SAMPLING PHOTO-ELECTRON DIRECTION              / INEEL   =         13  /          13
+ ELECTRON ANGLE GRID LENGTH FOR SAMPLING PHOTO-ELECTRON DIRECTION             / INPEL   =         21  /          21
+ PHOTON ENERGY GRID LENGTH FOR SAMPLING PAIR ELECTRON ENERGY                  / INEPS   =          9  /           9
+ ELECTRON ENERGY GRID LENGTH FOR SAMPLING PAIR ELECTON ENERGY                 / INPPS   =         21  /          21
+ GAUSSIAN FUNCTION GRID FOR SAMPLING ELECTRON ENERGY LOSS STRAGGLING          / INGAS   =       1000  /        1001
+ LANDAU FUNCTION GRID FOR SAMPLING ELECTRON ENERGY LOSS STRAGGLING            / INLAN   =       5000  /        5001
+ MAXIMUM NUMBER OF TABLES OF PHOTON CROSS SECTIONS                            / INTAB   =          2  /           2
+ MAXIMUM LENGTH OF PHOTON CROSS SECTION TABLE                                 / IMTAX   =         64  /          64
+ NUMBER OF ELECTRON ESCAPE ENERGY BINS                                        / IJMAX   =          0  /           0
+ NUMBER OF PHOTON ESCAPE ENERGY BINS                                          / IJPMAX  =          0  /           0
+ NUMBER OF ELECTRON ESCAPE POLAR ANGLE BINS                                   / IKMAX   =          0  /           0
+ NUMBER OF PHOTON ESCAPE POLAR ANGLE BINS                                     / IKPMAX  =          0  /           0
+ LENGTH OF SOURCE SPECTRUM ENERGY GRID                                        / IJSPEC  =          0  /           0
+ NUMBER OF PULSE HEIGHT ENERGY BINS                                           / IJSMAX  =          0  /           0
+ NUMBER OF ELECTRON FLUX ENERGY BINS                                          / IJFMAX  =          0  /           0
+ NUMBER OF PHOTON FLUX ENERGY BINS                                            / IJFMXP  =          0  /           0
+ NUMBER OF ELECTRON FLUX POLAR ANGLE BINS                                     / IKFMAX  =          0  /           0
+ NUMBER OF PHOTON FLUX POLAR ANGLE BINS                                       / IKFMXP  =          0  /           0
+ NUMBER OF ELECTRON FLUX ZONES                                                / INLF    =          0  /           0
+ NUMBER OF PHOTON FLUX ZONES                                                  / INLFP   =          0  /           0
+ SIZE OF DOUBLY DIFFERENTIAL BREMS DISTRIBUTION                               / NCHANG  =      30702  /       80682
+ SIZE OF SINGLY DIFFERENTIAL BREMS DISTRIBUTION                               / NBDIS   =      15041  /       39961
+ SIZE OF GOUDSMIT-SAUNDERSON ANGULAR DISTRIBUTION                             / NGG     =       5544  /       14784
+ NUMBER OF PROBLEM ZONES                                                      / INIZON  =          1  /           1
+ NUMBER OF PROBLEM SUB-ZONES                                                  / INSZON  =         50  /          50
+ NUMBER OF UNIQUE ELEMENTS IN THE PROBLEM                                     / INZZ    =          6  /           6
+ PROBABILITY ARRAY FOR SAMPLING PHOTO-IONIZATION ELEMENT INDEX                / NPPART  =        384  /         512
+ PHOTON ENERGY ARRAY - SAMPLING PHOTO-IONIZATION ELEMENT INDEX                / NEB     =        128  /         128
+ SIZE OF ARRAY FOR SAMPLING ELECTRON IMPACT IONIZATION SHELL                  / NSHEL   =       1014  /        2694
+ PROBABILITY ARRAY FOR SAMPLING ELEMENT INDEX FOR ELECTRON IMPACT IONIZATION  / NEPART  =       3042  /       10776
+1********************************
+ *   GEOMETRY DEPENDENT INPUT   *
+ ********************************
+0GEOMETRY-DEPENDENT OPTIONS (T/F = FEATURE ON/OFF)
+                   ELECTRON    ELECTRON      PHOTON SECONDARY SECONDARY                    
+ INPUT               CUTOFF    TRAPPING     FORCING  ELECTRON    PHOTON     SCALE   RUSSIAN
+  ZONE MATERIAL       (MEV)       (MEV)    FRACTION TRANSPORT TRANSPORT     BREMS  ROULETTE
+     1        4   6.380E-04   6.380E-04   0.000E+00         T         T         F         F
+0NUMBER OF MATERIAL LAYERS =    1
+                      NO.     THICKNESS
+ LAYER MATERIAL  SUBZONES          (CM)
+     1        4        50   3.52000E-02
+0BOUNDARIES IN GM/CM2
+ 4.99840E-02
+0BOUNDARIES IN MULTIPLES OF ELECTRON CSDA RANGE
+ 1.23081E+00
+1************************
+ *  SOURCE INFORMATION  *
+ ************************
+0SOURCE ELECTRONS
+0THE MAXIMUM SOURCE ENERGY IS      0.17783 MEV
+0THE GLOBAL ELECTRON CUTOFF ENERGY IS     0.00064 MEV
+0THE GLOBAL PHOTON CUTOFF ENERGY IS     0.00100 MEV
+0THE SOURCE PLANE IS LOCATED AT Z =  0.00000E+00 CM
+0REFERENCE DIRECTION FOR ANGULAR DISTRIBUTION IS DEFINED BY
+ THETA =      0.0000 DEGREES
+0COSINE-LAW SOURCE BETWEEN      0.0000 AND     90.0000 DEGREES WITH RESPECT TO REFERENCE DIRECTION
+1********************
+ *  OUTPUT OPTIONS  *
+ ********************
+0THE STANDARD ERROR ESTIMATES ARE BASED ON    320 BATCHES OF       5000 HISTORIES EACH
+1**********************
+ *  PHYSICAL OPTIONS  *
+ **********************
+0ELECTRON COLLISION AND RADIATION ENERGY LOSS STRAGGLING
+0TERMINAL PROCESSING OF ELECTRONS INCLUDES KICKING
+0KNOCK-ON ELECTRON PRODUCTION
+0NO COUPLED INELASTIC SCATTERING DEFLECTIONS
+0BREMSSTRAHLUNG INTRINSIC ANGLE OF EMISSION FROM TABULATED DISTRIBUTION
+0COUPLED ELECTRON/PHOTON TRANSPORT
+0       MATERIAL NO.  1
+ ELECTRON RANGE AT MAXIMUM SOURCE ENERGY IS      4.81858E-02 (G/CM**2)
+ K X-RAY QUANTA FOLLOWED
+ ELECTRON IMPACT IONIZATION SAMPLED
+0       MATERIAL NO.  2
+ ELECTRON RANGE AT MAXIMUM SOURCE ENERGY IS      3.79835E-02 (G/CM**2)
+ K X-RAY QUANTA NOT FOLLOWED
+ ELECTRON IMPACT IONIZATION NOT SAMPLED
+0       MATERIAL NO.  3
+ ELECTRON RANGE AT MAXIMUM SOURCE ENERGY IS      4.50091E-02 (G/CM**2)
+ K X-RAY QUANTA NOT FOLLOWED
+ ELECTRON IMPACT IONIZATION SAMPLED
+0       MATERIAL NO.  4
+ ELECTRON RANGE AT MAXIMUM SOURCE ENERGY IS      4.06106E-02 (G/CM**2)
+ K X-RAY QUANTA NOT FOLLOWED
+ ELECTRON IMPACT IONIZATION NOT SAMPLED
+0ANNIHILATION EVENTS ARE SPLIT BY A FACTOR OF    1.000E+00
+ ANNIHILATION QUANTA FOLLOWED
+1**parallel*************************
+ * parallel processing information *
+ **parallel*************************
+   parallel static load distribution
+   parallel number of processes =        4
+   parallel master option       =        1
+   parallel number of tasks     =        4 requested
+   parallel intermediate print  =        1
+   parallel allowed time factor =  0.00000E+00
+ cycle    1 number of tasks    4 seed    1.9073486328125000E+13
+  -subtask    0 seed =    1.9073486328125000E+13
+  -subtask    1 seed =    2.5340779878409000E+13
+  -subtask    2 seed =    7.5335646651557000E+13
+  -subtask    3 seed =    7.9914847804369000E+13
+  +subtask    0 nrn  =            23522218.      time =             1.47
+  +subtask    3 nrn  =            23437954.      time =             1.45
+  +subtask    1 nrn  =            23726712.      time =             1.49
+  +subtask    2 nrn  =            23410318.      time =             1.50
+ cycle    2 number of tasks    4 seed    2.8134729965389000E+13
+  -subtask    0 seed =    2.8134729965389000E+13
+  -subtask    1 seed =    2.2772761315580100E+14
+  -subtask    2 seed =    9.4240574692149000E+13
+  -subtask    3 seed =    2.5412469766659300E+14
+  +subtask    0 nrn  =            23374058.      time =             1.42
+  +subtask    2 nrn  =            23560108.      time =             1.42
+  +subtask    3 nrn  =            23491413.      time =             1.41
+  +subtask    1 nrn  =            23783477.      time =             1.45
+ cycle    3 number of tasks    4 seed    1.4153209256406100E+14
+  -subtask    0 seed =    1.4153209256406100E+14
+  -subtask    1 seed =    2.4174235557530000E+12
+  -subtask    2 seed =    1.1083091401491700E+14
+  -subtask    3 seed =    1.3438510151025000E+13
+  +subtask    0 nrn  =            23558112.      time =             1.41
+  +subtask    2 nrn  =            23714903.      time =             1.42
+  +subtask    3 nrn  =            23477822.      time =             1.42
+  +subtask    1 nrn  =            23439848.      time =             1.42
+ cycle    4 number of tasks    4 seed    2.2493734650122900E+14
+  -subtask    0 seed =    2.2493734650122900E+14
+  -subtask    1 seed =    1.9666712552664900E+14
+  -subtask    2 seed =    2.7032919105928500E+14
+  -subtask    3 seed =    1.5186708416096100E+14
+  +subtask    0 nrn  =            23838506.      time =             1.44
+  +subtask    2 nrn  =            23641699.      time =             1.44
+  +subtask    3 nrn  =            23615875.      time =             1.45
+  +subtask    1 nrn  =            23943782.      time =             1.47
+ cycle    5 number of tasks    4 seed    7.6226803926909000E+13
+  -subtask    0 seed =    7.6226803926909000E+13
+  -subtask    1 seed =    4.4202814907721000E+13
+  -subtask    2 seed =    1.9143442640101000E+13
+  -subtask    3 seed =    3.1824430838545000E+13
+  +subtask    0 nrn  =            23312022.      time =             1.35
+  +subtask    1 nrn  =            23615646.      time =             1.36
+  +subtask    3 nrn  =            23715945.      time =             1.37
+  +subtask    2 nrn  =            23905977.      time =             1.38
+ cycle    6 number of tasks    4 seed    2.1699280450599700E+14
+  -subtask    0 seed =    2.1699280450599700E+14
+  -subtask    1 seed =    1.9748597238553000E+13
+  -subtask    2 seed =    1.8619604577266100E+14
+  -subtask    3 seed =    1.9949722841072100E+14
+  +subtask    0 nrn  =            23491387.      time =             1.44
+  +subtask    1 nrn  =            23749947.      time =             1.44
+  +subtask    2 nrn  =            23796323.      time =             1.43
+  +subtask    3 nrn  =            23558874.      time =             1.42
+ cycle    7 number of tasks    4 seed    2.6865909531458900E+14
+  -subtask    0 seed =    2.6865909531458900E+14
+  -subtask    1 seed =    2.2184352172900100E+14
+  -subtask    2 seed =    5.5880127446789000E+13
+  -subtask    3 seed =    7.6684842276017000E+13
+  +subtask    0 nrn  =            23376526.      time =             1.55
+  +subtask    1 nrn  =            23722936.      time =             1.54
+  +subtask    3 nrn  =            23831781.      time =             1.57
+  +subtask    2 nrn  =            23643217.      time =             1.58
+ cycle    8 number of tasks    4 seed    2.6412624305325000E+13
+  -subtask    0 seed =    2.6412624305325000E+13
+  -subtask    1 seed =    1.7675476232850500E+14
+  -subtask    2 seed =    1.3548328108533300E+14
+  -subtask    3 seed =    2.4279237814758500E+14
+  +subtask    0 nrn  =            23531940.      time =             1.51
+  +subtask    1 nrn  =            23666706.      time =             1.50
+  +subtask    3 nrn  =            23562351.      time =             1.48
+  +subtask    2 nrn  =            23779689.      time =             1.51
+ cycle    9 number of tasks    4 seed    3.5279451704765000E+13
+  -subtask    0 seed =    3.5279451704765000E+13
+  -subtask    1 seed =    2.5907690376461700E+14
+  -subtask    2 seed =    4.8238084490533000E+13
+  -subtask    3 seed =    1.4786371494561700E+14
+  +subtask    0 nrn  =            23614793.      time =             1.48
+  +subtask    2 nrn  =            23672514.      time =             1.46
+  +subtask    3 nrn  =            23464951.      time =             1.47
+  +subtask    1 nrn  =            23768550.      time =             1.49
+ cycle   10 number of tasks    4 seed    1.6061610587028500E+14
+  -subtask    0 seed =    1.6061610587028500E+14
+  -subtask    1 seed =    3.6423306464345000E+13
+  -subtask    2 seed =    2.7528012935262900E+14
+  -subtask    3 seed =    1.4657888485648100E+14
+  +subtask    0 nrn  =            23587534.      time =             1.39
+  +subtask    3 nrn  =            23664926.      time =             1.41
+  +subtask    2 nrn  =            23655077.      time =             1.43
+  +subtask    1 nrn  =            23769196.      time =             1.44
+ cycle   11 number of tasks    4 seed    5.5146911796957000E+13
+  -subtask    0 seed =    5.5146911796957000E+13
+  -subtask    1 seed =    1.4313615437597700E+14
+  -subtask    2 seed =    7.5153393088690000E+12
+  -subtask    3 seed =    6.4446422778865000E+13
+  +subtask    0 nrn  =            23718349.      time =             1.43
+  +subtask    1 nrn  =            23493662.      time =             1.42
+  +subtask    2 nrn  =            23539165.      time =             1.40
+  +subtask    3 nrn  =            23609584.      time =             1.43
+ cycle   12 number of tasks    4 seed    2.7709509169943700E+14
+  -subtask    0 seed =    2.7709509169943700E+14
+  -subtask    1 seed =    9.6377706279673000E+13
+  -subtask    2 seed =    9.2197845280725000E+13
+  -subtask    3 seed =    1.1401943502598500E+14
+  +subtask    0 nrn  =            23701221.      time =             1.41
+  +subtask    1 nrn  =            23725215.      time =             1.40
+  +subtask    2 nrn  =            23499484.      time =             1.40
+  +subtask    3 nrn  =            23531368.      time =             1.44
+ cycle   13 number of tasks    4 seed    9.5007065958370000E+12
+  -subtask    0 seed =    9.5007065958370000E+12
+  -subtask    1 seed =    2.7880165306313000E+13
+  -subtask    2 seed =    1.5980484425661300E+14
+  -subtask    3 seed =    4.8660446384529000E+13
+  +subtask    0 nrn  =            23346496.      time =             1.56
+  +subtask    1 nrn  =            23448276.      time =             1.53
+  +subtask    2 nrn  =            23595941.      time =             1.50
+  +subtask    3 nrn  =            23585953.      time =             1.53
+ cycle   14 number of tasks    4 seed    2.0986635539610900E+14
+  -subtask    0 seed =    2.0986635539610900E+14
+  -subtask    1 seed =    1.0275957644431300E+14
+  -subtask    2 seed =    1.9595291412888500E+14
+  -subtask    3 seed =    2.3774645425097700E+14
+  +subtask    0 nrn  =            23698884.      time =             1.46
+  +subtask    1 nrn  =            23604004.      time =             1.44
+  +subtask    2 nrn  =            23720924.      time =             1.42
+  +subtask    3 nrn  =            23573623.      time =             1.45
+ cycle   15 number of tasks    4 seed    3.0131444665629000E+13
+  -subtask    0 seed =    3.0131444665629000E+13
+  -subtask    1 seed =    3.4876042234985000E+13
+  -subtask    2 seed =    1.8048574148485000E+13
+  -subtask    3 seed =    2.0869356421201700E+14
+  +subtask    0 nrn  =            23549549.      time =             1.37
+  +subtask    3 nrn  =            23413001.      time =             1.37
+  +subtask    2 nrn  =            23642093.      time =             1.40
+  +subtask    1 nrn  =            23704627.      time =             1.41
+ cycle   16 number of tasks    4 seed    1.3772617373726100E+14
+  -subtask    0 seed =    1.3772617373726100E+14
+  -subtask    1 seed =    2.7050206067410500E+14
+  -subtask    2 seed =    1.1582713472923700E+14
+  -subtask    3 seed =    2.4893444788057700E+14
+  +subtask    0 nrn  =            23575555.      time =             1.46
+  +subtask    2 nrn  =            23746906.      time =             1.46
+  +subtask    3 nrn  =            23561887.      time =             1.46
+  +subtask    1 nrn  =            23813800.      time =             1.49
+ cycle   17 number of tasks    4 seed    8.2995088214589000E+13
+  -subtask    0 seed =    8.2995088214589000E+13
+  -subtask    1 seed =    1.8102961048295300E+14
+  -subtask    2 seed =    2.7588191414826100E+14
+  -subtask    3 seed =    2.1692553949000100E+14
+  +subtask    0 nrn  =            23703067.      time =             1.41
+  +subtask    2 nrn  =            23719085.      time =             1.41
+  +subtask    3 nrn  =            23632824.      time =             1.41
+  +subtask    1 nrn  =            23663098.      time =             1.45
+ cycle   18 number of tasks    4 seed    1.7196812798574100E+14
+  -subtask    0 seed =    1.7196812798574100E+14
+  -subtask    1 seed =    1.0375781154521000E+13
+  -subtask    2 seed =    2.2405547679237300E+14
+  -subtask    3 seed =    7.9659832643873000E+13
+  +subtask    0 nrn  =            23931651.      time =             1.47
+  +subtask    1 nrn  =            23541323.      time =             1.43
+  +subtask    2 nrn  =            23468203.      time =             1.46
+  +subtask    3 nrn  =            23577729.      time =             1.42
+ cycle   19 number of tasks    4 seed    2.7667619567087700E+14
+  -subtask    0 seed =    2.7667619567087700E+14
+  -subtask    1 seed =    1.7867364563805700E+14
+  -subtask    2 seed =    1.5012671467461000E+13
+  -subtask    3 seed =    2.1728603174155300E+14
+  +subtask    0 nrn  =            23649712.      time =             1.58
+  +subtask    2 nrn  =            23657555.      time =             1.56
+  +subtask    3 nrn  =            23871516.      time =             1.58
+  +subtask    1 nrn  =            23793849.      time =             1.59
+ cycle   20 number of tasks    4 seed    7.7731296424813000E+13
+  -subtask    0 seed =    7.7731296424813000E+13
+  -subtask    1 seed =    1.3690069668389700E+14
+  -subtask    2 seed =    2.7623677662011700E+14
+  -subtask    3 seed =    2.7169958131628900E+14
+  +subtask    0 nrn  =            23665802.      time =             1.80
+  +subtask    1 nrn  =            23654541.      time =             1.76
+  +subtask    2 nrn  =            23608741.      time =             1.76
+  +subtask    3 nrn  =            23442768.      time =             1.76
+ cycle   21 number of tasks    4 seed    1.9138065118015700E+14
+  -subtask    0 seed =    1.9138065118015700E+14
+  -subtask    1 seed =    2.3610967998317700E+14
+  -subtask    2 seed =    1.9250086768101000E+13
+  -subtask    3 seed =    2.4941534584424100E+14
+  +subtask    0 nrn  =            23490251.      time =             1.93
+  +subtask    3 nrn  =            23344851.      time =             1.91
+  +subtask    1 nrn  =            23589696.      time =             1.99
+  +subtask    2 nrn  =            23822064.      time =             1.99
+ cycle   22 number of tasks    4 seed    3.3361511699085000E+13
+  -subtask    0 seed =    3.3361511699085000E+13
+  -subtask    1 seed =    9.7928082026521000E+13
+  -subtask    2 seed =    1.7053849657560500E+14
+  -subtask    3 seed =    1.4011960727459300E+14
+  +subtask    0 nrn  =            23823232.      time =             1.83
+  +subtask    1 nrn  =            23426185.      time =             1.81
+  +subtask    2 nrn  =            23649157.      time =             1.83
+  +subtask    3 nrn  =            23661446.      time =             1.83
+ cycle   23 number of tasks    4 seed    3.5545426475421000E+13
+  -subtask    0 seed =    3.5545426475421000E+13
+  -subtask    1 seed =    1.9658265466647300E+14
+  -subtask    2 seed =    2.2950803782861300E+14
+  -subtask    3 seed =    6.9964700823985000E+13
+  +subtask    0 nrn  =            23529410.      time =             1.58
+  +subtask    2 nrn  =            23770072.      time =             1.56
+  +subtask    1 nrn  =            23675452.      time =             1.60
+  +subtask    3 nrn  =            23680648.      time =             1.63
+ cycle   24 number of tasks    4 seed    1.7986851971217300E+14
+  -subtask    0 seed =    1.7986851971217300E+14
+  -subtask    1 seed =    1.6042686203052100E+14
+  -subtask    2 seed =    7.5410025794100000E+11
+  -subtask    3 seed =    2.2127448918016100E+14
+  +subtask    0 nrn  =            23742187.      time =             1.53
+  +subtask    1 nrn  =            23397684.      time =             1.49
+  +subtask    2 nrn  =            23630228.      time =             1.49
+  +subtask    3 nrn  =            23440799.      time =             1.50
+ cycle   25 number of tasks    4 seed    2.0622052596294100E+14
+  -subtask    0 seed =    2.0622052596294100E+14
+  -subtask    1 seed =    2.8247198504841000E+13
+  -subtask    2 seed =    2.7912120693712500E+14
+  -subtask    3 seed =    1.0898011931220900E+14
+  +subtask    0 nrn  =            23422074.      time =             1.63
+  +subtask    3 nrn  =            23503084.      time =             1.58
+  +subtask    1 nrn  =            23452575.      time =             1.65
+  +subtask    2 nrn  =            23659784.      time =             1.66
+ cycle   26 number of tasks    4 seed    6.9370876431565000E+13
+  -subtask    0 seed =    6.9370876431565000E+13
+  -subtask    1 seed =    1.8343846647842500E+14
+  -subtask    2 seed =    9.0167292572853000E+13
+  -subtask    3 seed =    1.2518467274947300E+14
+  +subtask    0 nrn  =            23820105.      time =             1.66
+  +subtask    1 nrn  =            23506138.      time =             1.63
+  +subtask    2 nrn  =            23507147.      time =             1.60
+  +subtask    3 nrn  =            23421681.      time =             1.64
+ cycle   27 number of tasks    4 seed    4.8204381644765000E+13
+  -subtask    0 seed =    4.8204381644765000E+13
+  -subtask    1 seed =    1.1361154741354500E+14
+  -subtask    2 seed =    5.6439659323461000E+13
+  -subtask    3 seed =    2.3661857396350500E+14
+  +subtask    0 nrn  =            23550359.      time =             1.54
+  +subtask    1 nrn  =            23483907.      time =             1.54
+  +subtask    3 nrn  =            23728778.      time =             1.56
+  +subtask    2 nrn  =            23828585.      time =             1.60
+ cycle   28 number of tasks    4 seed    2.6161397695486100E+14
+  -subtask    0 seed =    2.6161397695486100E+14
+  -subtask    1 seed =    6.7135560888250000E+12
+  -subtask    2 seed =    2.7370786243195700E+14
+  -subtask    3 seed =    4.8146005459777000E+13
+  +subtask    0 nrn  =            23653318.      time =             1.63
+  +subtask    1 nrn  =            23612328.      time =             1.62
+  +subtask    2 nrn  =            23544515.      time =             1.60
+  +subtask    3 nrn  =            23391000.      time =             1.56
+ cycle   29 number of tasks    4 seed    1.6499522231549000E+13
+  -subtask    0 seed =    1.6499522231549000E+13
+  -subtask    1 seed =    1.8386881608212100E+14
+  -subtask    2 seed =    2.0265209354198900E+14
+  -subtask    3 seed =    1.0619551465844900E+14
+  +subtask    0 nrn  =            23566497.      time =             1.68
+  +subtask    1 nrn  =            23496945.      time =             1.65
+  +subtask    3 nrn  =            23561923.      time =             1.65
+  +subtask    2 nrn  =            23683097.      time =             1.69
+ cycle   30 number of tasks    4 seed    2.0435030983246100E+14
+  -subtask    0 seed =    2.0435030983246100E+14
+  -subtask    1 seed =    7.2291668525721000E+13
+  -subtask    2 seed =    2.5224840039243700E+14
+  -subtask    3 seed =    2.6951462448816100E+14
+  +subtask    0 nrn  =            23723611.      time =             1.55
+  +subtask    1 nrn  =            23564037.      time =             1.55
+  +subtask    2 nrn  =            23296671.      time =             1.53
+  +subtask    3 nrn  =            23791241.      time =             1.52
+ cycle   31 number of tasks    4 seed    2.5472648166761300E+14
+  -subtask    0 seed =    2.5472648166761300E+14
+  -subtask    1 seed =    2.5702056553712900E+14
+  -subtask    2 seed =    1.0093265290458100E+14
+  -subtask    3 seed =    2.8112497295850000E+12
+  +subtask    0 nrn  =            23493587.      time =             1.52
+  +subtask    3 nrn  =            23591577.      time =             1.54
+  +subtask    2 nrn  =            23775249.      time =             1.55
+  +subtask    1 nrn  =            23436437.      time =             1.56
+ cycle   32 number of tasks    4 seed    1.2883230709201300E+14
+  -subtask    0 seed =    1.2883230709201300E+14
+  -subtask    1 seed =    8.9789496568890000E+12
+  -subtask    2 seed =    8.6415512714517000E+13
+  -subtask    3 seed =    2.9768519665281000E+13
+  +subtask    0 nrn  =            23599492.      time =             1.68
+  +subtask    2 nrn  =            23619102.      time =             1.67
+  +subtask    3 nrn  =            23644493.      time =             1.70
+  +subtask    1 nrn  =            23658751.      time =             1.72
+ cycle   33 number of tasks    4 seed    2.4486253881017300E+14
+  -subtask    0 seed =    2.4486253881017300E+14
+  -subtask    1 seed =    8.7640657560073000E+13
+  -subtask    2 seed =    1.3680923247581300E+14
+  -subtask    3 seed =    1.2514856154465700E+14
+  +subtask    0 nrn  =            23560835.      time =             1.68
+  +subtask    2 nrn  =            23402999.      time =             1.67
+  +subtask    3 nrn  =            23450067.      time =             1.63
+  +subtask    1 nrn  =            23759034.      time =             1.71
+ cycle   34 number of tasks    4 seed    1.7481613888340500E+14
+  -subtask    0 seed =    1.7481613888340500E+14
+  -subtask    1 seed =    7.9594460029913000E+13
+  -subtask    2 seed =    2.7222261838571700E+14
+  -subtask    3 seed =    2.1390260449232100E+14
+  +subtask    0 nrn  =            23701668.      time =             1.55
+  +subtask    3 nrn  =            23696830.      time =             1.54
+  +subtask    2 nrn  =            23827531.      time =             1.58
+  +subtask    1 nrn  =            23733744.      time =             1.58
+ cycle   35 number of tasks    4 seed    9.8986182816861000E+13
+  -subtask    0 seed =    9.8986182816861000E+13
+  -subtask    1 seed =    1.9031620010154500E+14
+  -subtask    2 seed =    6.1790636527813000E+13
+  -subtask    3 seed =    1.8737530840254500E+14
+  +subtask    0 nrn  =            23815716.      time =             1.53
+  +subtask    3 nrn  =            23526276.      time =             1.53
+  +subtask    1 nrn  =            23595106.      time =             1.57
+  +subtask    2 nrn  =            23679892.      time =             1.57
+ cycle   36 number of tasks    4 seed    2.4760510276311700E+14
+  -subtask    0 seed =    2.4760510276311700E+14
+  -subtask    1 seed =    3.7691989346490000E+12
+  -subtask    2 seed =    1.2504934597870900E+14
+  -subtask    3 seed =    1.5642943920577000E+13
+  +subtask    0 nrn  =            23432816.      time =             1.65
+  +subtask    2 nrn  =            23664536.      time =             1.62
+  +subtask    3 nrn  =            23362301.      time =             1.65
+  +subtask    1 nrn  =            23702144.      time =             1.67
+ cycle   37 number of tasks    4 seed    1.4206873696637000E+13
+  -subtask    0 seed =    1.4206873696637000E+13
+  -subtask    1 seed =    1.5516422591674500E+14
+  -subtask    2 seed =    2.1596126515581300E+14
+  -subtask    3 seed =    1.5324439260433000E+13
+  +subtask    0 nrn  =            23414973.      time =             1.56
+  +subtask    2 nrn  =            23493675.      time =             1.56
+  +subtask    1 nrn  =            23682025.      time =             1.57
+  +subtask    3 nrn  =            23766290.      time =             1.59
+ cycle   38 number of tasks    4 seed    7.7752118582157000E+13
+  -subtask    0 seed =    7.7752118582157000E+13
+  -subtask    1 seed =    5.5908011430650000E+12
+  -subtask    2 seed =    1.1771922080395700E+14
+  -subtask    3 seed =    2.7706343607331300E+14
+  +subtask    0 nrn  =            23393613.      time =             1.64
+  +subtask    2 nrn  =            23503121.      time =             1.63
+  +subtask    1 nrn  =            23708129.      time =             1.66
+  +subtask    3 nrn  =            23610944.      time =             1.66
+ cycle   39 number of tasks    4 seed    2.4926689934198100E+14
+  -subtask    0 seed =    2.4926689934198100E+14
+  -subtask    1 seed =    2.5755500123645700E+14
+  -subtask    2 seed =    2.1034963714309000E+13
+  -subtask    3 seed =    2.1133442939665700E+14
+  +subtask    0 nrn  =            23726192.      time =             1.56
+  +subtask    2 nrn  =            23659644.      time =             1.56
+  +subtask    1 nrn  =            23564413.      time =             1.57
+  +subtask    3 nrn  =            23895792.      time =             1.58
+ cycle   40 number of tasks    4 seed    2.3865653767853000E+13
+  -subtask    0 seed =    2.3865653767853000E+13
+  -subtask    1 seed =    2.6044141548473000E+13
+  -subtask    2 seed =    2.2516507862363700E+14
+  -subtask    3 seed =    1.9803678307046500E+14
+  +subtask    0 nrn  =            23672365.      time =             1.54
+  +subtask    2 nrn  =            23499557.      time =             1.55
+  +subtask    3 nrn  =            23557532.      time =             1.56
+  +subtask    1 nrn  =            23705145.      time =             1.59
+ cycle   41 number of tasks    4 seed    2.1695494389090000E+12
+  -subtask    0 seed =    2.1695494389090000E+12
+  -subtask    1 seed =    2.4353862757513000E+13
+  -subtask    2 seed =    5.3174992897829000E+13
+  -subtask    3 seed =    2.5679061043310500E+14
+  +subtask    0 nrn  =            23368331.      time =             1.56
+  +subtask    2 nrn  =            23507157.      time =             1.54
+  +subtask    3 nrn  =            23504719.      time =             1.54
+  +subtask    1 nrn  =            23758383.      time =             1.57
+ cycle   42 number of tasks    4 seed    4.1847939044813000E+13
+  -subtask    0 seed =    4.1847939044813000E+13
+  -subtask    1 seed =    6.9375919298137000E+13
+  -subtask    2 seed =    7.3166501021109000E+13
+  -subtask    3 seed =    7.7117699302561000E+13
+  +subtask    0 nrn  =            23594101.      time =             1.64
+  +subtask    2 nrn  =            23515384.      time =             1.66
+  +subtask    1 nrn  =            23719654.      time =             1.68
+  +subtask    3 nrn  =            23566489.      time =             1.68
+ cycle   43 number of tasks    4 seed    3.8813756113117000E+13
+  -subtask    0 seed =    3.8813756113117000E+13
+  -subtask    1 seed =    2.4894293688617000E+13
+  -subtask    2 seed =    4.2188916162885000E+13
+  -subtask    3 seed =    2.5086355488241000E+13
+  +subtask    0 nrn  =            23360591.      time =             1.57
+  +subtask    2 nrn  =            23963200.      time =             1.59
+  +subtask    1 nrn  =            23494518.      time =             1.60
+  +subtask    3 nrn  =            23767829.      time =             1.60
+ cycle   44 number of tasks    4 seed    1.6916249672522900E+14
+  -subtask    0 seed =    1.6916249672522900E+14
+  -subtask    1 seed =    3.5661967981817000E+13
+  -subtask    2 seed =    2.0262447526958900E+14
+  -subtask    3 seed =    1.9337330818668900E+14
+  +subtask    0 nrn  =            23459371.      time =             1.63
+  +subtask    1 nrn  =            23632541.      time =             1.61
+  +subtask    3 nrn  =            23708730.      time =             1.66
+  +subtask    2 nrn  =            23752155.      time =             1.66
+ cycle   45 number of tasks    4 seed    1.6222732955391700E+14
+  -subtask    0 seed =    1.6222732955391700E+14
+  -subtask    1 seed =    4.1019765103049000E+13
+  -subtask    2 seed =    2.0811601334666100E+14
+  -subtask    3 seed =    3.5550034987921000E+13
+  +subtask    0 nrn  =            23721845.      time =             1.54
+  +subtask    2 nrn  =            23295686.      time =             1.52
+  +subtask    1 nrn  =            23827340.      time =             1.55
+  +subtask    3 nrn  =            23651130.      time =             1.56
+ cycle   46 number of tasks    4 seed    1.1231516024845000E+13
+  -subtask    0 seed =    1.1231516024845000E+13
+  -subtask    1 seed =    2.6927796832860100E+14
+  -subtask    2 seed =    1.2475352848843700E+14
+  -subtask    3 seed =    1.5426151395324900E+14
+  +subtask    0 nrn  =            23706013.      time =             1.58
+  +subtask    1 nrn  =            23573572.      time =             1.56
+  +subtask    2 nrn  =            23657806.      time =             1.55
+  +subtask    3 nrn  =            23563210.      time =             1.55
+ cycle   47 number of tasks    4 seed    1.3050968221263700E+14
+  -subtask    0 seed =    1.3050968221263700E+14
+  -subtask    1 seed =    9.7513789005850000E+12
+  -subtask    2 seed =    1.6845365809541000E+13
+  -subtask    3 seed =    2.3080623952619300E+14
+  +subtask    0 nrn  =            23561034.      time =             1.55
+  +subtask    2 nrn  =            23560374.      time =             1.55
+  +subtask    1 nrn  =            23528132.      time =             1.56
+  +subtask    3 nrn  =            23634641.      time =             1.56
+ cycle   48 number of tasks    4 seed    1.4975056270212500E+14
+  -subtask    0 seed =    1.4975056270212500E+14
+  -subtask    1 seed =    6.9443612431929000E+13
+  -subtask    2 seed =    1.5984477057384500E+14
+  -subtask    3 seed =    2.5619225162227300E+14
+  +subtask    0 nrn  =            23808260.      time =             1.56
+  +subtask    1 nrn  =            23565571.      time =             1.54
+  +subtask    2 nrn  =            23314059.      time =             1.53
+  +subtask    3 nrn  =            23744078.      time =             1.53
+ cycle   49 number of tasks    4 seed    6.7475564575805000E+13
+  -subtask    0 seed =    6.7475564575805000E+13
+  -subtask    1 seed =    1.8485665219149700E+14
+  -subtask    2 seed =    1.9348059423734900E+14
+  -subtask    3 seed =    2.8050932392417700E+14
+  +subtask    0 nrn  =            23506721.      time =             1.49
+  +subtask    1 nrn  =            23792823.      time =             1.49
+  +subtask    3 nrn  =            23845159.      time =             1.51
+  +subtask    2 nrn  =            23726821.      time =             1.51
+ cycle   50 number of tasks    4 seed    6.8305576426061000E+13
+  -subtask    0 seed =    6.8305576426061000E+13
+  -subtask    1 seed =    2.6777545351394500E+14
+  -subtask    2 seed =    7.1962933218869000E+13
+  -subtask    3 seed =    1.4268779814377700E+14
+  +subtask    0 nrn  =            23625322.      time =             1.65
+  +subtask    1 nrn  =            23723630.      time =             1.64
+  +subtask    2 nrn  =            23572681.      time =             1.64
+  +subtask    3 nrn  =            23296430.      time =             1.62
+ cycle   51 number of tasks    4 seed    2.0660498622396500E+14
+  -subtask    0 seed =    2.0660498622396500E+14
+  -subtask    1 seed =    1.4008387556036100E+14
+  -subtask    2 seed =    1.0206557467077000E+13
+  -subtask    3 seed =    2.1095437364747300E+14
+  +subtask    0 nrn  =            23370963.      time =             1.57
+  +subtask    1 nrn  =            23621919.      time =             1.57
+  +subtask    2 nrn  =            23594014.      time =             1.52
+  +subtask    3 nrn  =            23586926.      time =             1.55
+ cycle   52 number of tasks    4 seed    1.2082200773997000E+13
+  -subtask    0 seed =    1.2082200773997000E+13
+  -subtask    1 seed =    2.4267277013797700E+14
+  -subtask    2 seed =    2.5482328056405000E+13
+  -subtask    3 seed =    3.3351404438410000E+12
+  +subtask    0 nrn  =            23783118.      time =             1.56
+  +subtask    2 nrn  =            23438366.      time =             1.57
+  +subtask    1 nrn  =            23445515.      time =             1.57
+  +subtask    3 nrn  =            23866053.      time =             1.57
+ cycle   53 number of tasks    4 seed    2.6300279815846100E+14
+  -subtask    0 seed =    2.6300279815846100E+14
+  -subtask    1 seed =    1.5218738417773700E+14
+  -subtask    2 seed =    1.6678436503139700E+14
+  -subtask    3 seed =    7.3209276148241000E+13
+  +subtask    0 nrn  =            23378049.      time =             1.61
+  +subtask    2 nrn  =            23443804.      time =             1.67
+  +subtask    3 nrn  =            23646105.      time =             1.68
+  +subtask    1 nrn  =            23788632.      time =             1.69
+ cycle   54 number of tasks    4 seed    3.3449190122637000E+13
+  -subtask    0 seed =    3.3449190122637000E+13
+  -subtask    1 seed =    2.0996874808373700E+14
+  -subtask    2 seed =    2.6451964804568500E+14
+  -subtask    3 seed =    2.6914867629424100E+14
+  +subtask    0 nrn  =            23554598.      time =             1.60
+  +subtask    3 nrn  =            23522007.      time =             1.58
+  +subtask    1 nrn  =            23777605.      time =             1.63
+  +subtask    2 nrn  =            23485860.      time =             1.64
+ cycle   55 number of tasks    4 seed    6.1779016870813000E+13
+  -subtask    0 seed =    6.1779016870813000E+13
+  -subtask    1 seed =    2.0825287241341700E+14
+  -subtask    2 seed =    2.3038475633510900E+14
+  -subtask    3 seed =    2.6622178865451300E+14
+  +subtask    0 nrn  =            23878616.      time =             1.53
+  +subtask    2 nrn  =            23484210.      time =             1.53
+  +subtask    1 nrn  =            23560266.      time =             1.55
+  +subtask    3 nrn  =            23876435.      time =             1.56
+ cycle   56 number of tasks    4 seed    1.1517165968375700E+14
+  -subtask    0 seed =    1.1517165968375700E+14
+  -subtask    1 seed =    2.3887448225977000E+13
+  -subtask    2 seed =    5.5982814799509000E+13
+  -subtask    3 seed =    1.5910754665523300E+14
+  +subtask    0 nrn  =            23483485.      time =             1.67
+  +subtask    2 nrn  =            23372426.      time =             1.63
+  +subtask    3 nrn  =            23562202.      time =             1.69
+  +subtask    1 nrn  =            23840818.      time =             1.70
+ cycle   57 number of tasks    4 seed    1.9802829655058900E+14
+  -subtask    0 seed =    1.9802829655058900E+14
+  -subtask    1 seed =    8.9686183952777000E+13
+  -subtask    2 seed =    2.2500950157110900E+14
+  -subtask    3 seed =    1.7421314556347300E+14
+  +subtask    0 nrn  =            23678693.      time =             1.78
+  +subtask    1 nrn  =            23510592.      time =             1.77
+  +subtask    2 nrn  =            23619670.      time =             1.78
+  +subtask    3 nrn  =            23664959.      time =             1.78
+ cycle   58 number of tasks    4 seed    1.7556964321658900E+14
+  -subtask    0 seed =    1.7556964321658900E+14
+  -subtask    1 seed =    6.9874259606361000E+13
+  -subtask    2 seed =    4.8850771793589000E+13
+  -subtask    3 seed =    7.6997813170250000E+12
+  +subtask    0 nrn  =            23716473.      time =             1.87
+  +subtask    1 nrn  =            23471869.      time =             1.83
+  +subtask    2 nrn  =            23604403.      time =             1.82
+  +subtask    3 nrn  =            23269764.      time =             1.84
+ cycle   59 number of tasks    4 seed    9.2913537391069000E+13
+  -subtask    0 seed =    9.2913537391069000E+13
+  -subtask    1 seed =    2.6558117265156100E+14
+  -subtask    2 seed =    2.7727481381445000E+13
+  -subtask    3 seed =    2.5544832910001700E+14
+  +subtask    0 nrn  =            23695036.      time =             1.56
+  +subtask    2 nrn  =            23560358.      time =             1.56
+  +subtask    1 nrn  =            23688949.      time =             1.56
+  +subtask    3 nrn  =            23630995.      time =             1.57
+ cycle   60 number of tasks    4 seed    1.8160595766321300E+14
+  -subtask    0 seed =    1.8160595766321300E+14
+  -subtask    1 seed =    1.4746863106508100E+14
+  -subtask    2 seed =    8.6780496935637000E+13
+  -subtask    3 seed =    1.6579658064620900E+14
+  +subtask    0 nrn  =            23458765.      time =             1.58
+  +subtask    1 nrn  =            23471996.      time =             1.60
+  +subtask    2 nrn  =            23618114.      time =             1.61
+  +subtask    3 nrn  =            23748985.      time =             1.64
+ cycle   61 number of tasks    4 seed    1.3091868660914900E+14
+  -subtask    0 seed =    1.3091868660914900E+14
+  -subtask    1 seed =    6.5931229753033000E+13
+  -subtask    2 seed =    2.2681133363619700E+14
+  -subtask    3 seed =    1.0697524468340900E+14
+  +subtask    0 nrn  =            23690639.      time =             1.55
+  +subtask    2 nrn  =            23350926.      time =             1.51
+  +subtask    3 nrn  =            23737589.      time =             1.54
+  +subtask    1 nrn  =            23766722.      time =             1.58
+ cycle   62 number of tasks    4 seed    8.2415443781901000E+13
+  -subtask    0 seed =    8.2415443781901000E+13
+  -subtask    1 seed =    1.8535938548034500E+14
+  -subtask    2 seed =    1.5350971241205000E+13
+  -subtask    3 seed =    1.0506617123145700E+14
+  +subtask    0 nrn  =            23458201.      time =             1.67
+  +subtask    1 nrn  =            23388792.      time =             1.65
+  +subtask    3 nrn  =            23609165.      time =             1.67
+  +subtask    2 nrn  =            23850575.      time =             1.70
+ cycle   63 number of tasks    4 seed    2.7518218584681300E+14
+  -subtask    0 seed =    2.7518218584681300E+14
+  -subtask    1 seed =    2.9618816035689000E+13
+  -subtask    2 seed =    1.1550564967693300E+14
+  -subtask    3 seed =    1.7789673831480100E+14
+  +subtask    0 nrn  =            23181591.      time =             1.56
+  +subtask    2 nrn  =            23733559.      time =             1.58
+  +subtask    3 nrn  =            23715339.      time =             1.59
+  +subtask    1 nrn  =            23585675.      time =             1.59
+ cycle   64 number of tasks    4 seed    2.0487497732407700E+14
+  -subtask    0 seed =    2.0487497732407700E+14
+  -subtask    1 seed =    1.1395750283551300E+14
+  -subtask    2 seed =    1.0600386491982900E+14
+  -subtask    3 seed =    2.6652065009676900E+14
+  +subtask    0 nrn  =            23538792.      time =             1.61
+  +subtask    2 nrn  =            23652943.      time =             1.61
+  +subtask    3 nrn  =            23516152.      time =             1.61
+  +subtask    1 nrn  =            23612375.      time =             1.65
+ cycle   65 number of tasks    4 seed    4.4976075273533000E+13
+  -subtask    0 seed =    4.4976075273533000E+13
+  -subtask    1 seed =    2.6811083467785000E+13
+  -subtask    2 seed =    2.5223553818026100E+14
+  -subtask    3 seed =    9.8104415723050000E+12
+  +subtask    0 nrn  =            23656805.      time =             1.54
+  +subtask    3 nrn  =            23427497.      time =             1.55
+  +subtask    2 nrn  =            23539243.      time =             1.55
+  +subtask    1 nrn  =            23646789.      time =             1.58
+ cycle   66 number of tasks    4 seed    5.7910645621581000E+13
+  -subtask    0 seed =    5.7910645621581000E+13
+  -subtask    1 seed =    1.3036862533081000E+13
+  -subtask    2 seed =    6.3999004221237000E+13
+  -subtask    3 seed =    1.1732074485968100E+14
+  +subtask    0 nrn  =            23748600.      time =             1.65
+  +subtask    2 nrn  =            23625822.      time =             1.62
+  +subtask    1 nrn  =            23601289.      time =             1.66
+  +subtask    3 nrn  =            23904271.      time =             1.69
+ cycle   67 number of tasks    4 seed    9.1760114099805000E+13
+  -subtask    0 seed =    9.1760114099805000E+13
+  -subtask    1 seed =    3.5302762148009000E+13
+  -subtask    2 seed =    9.9878958207685000E+13
+  -subtask    3 seed =    2.5696693971595300E+14
+  +subtask    0 nrn  =            23689330.      time =             1.63
+  +subtask    1 nrn  =            23631973.      time =             1.64
+  +subtask    2 nrn  =            23612749.      time =             1.64
+  +subtask    3 nrn  =            23817138.      time =             1.66
+ cycle   68 number of tasks    4 seed    1.2119408831242900E+14
+  -subtask    0 seed =    1.2119408831242900E+14
+  -subtask    1 seed =    2.7210634251583300E+14
+  -subtask    2 seed =    2.1994517021166900E+14
+  -subtask    3 seed =    6.0364880638913000E+13
+  +subtask    0 nrn  =            23590706.      time =             1.63
+  +subtask    2 nrn  =            23638105.      time =             1.67
+  +subtask    1 nrn  =            23438045.      time =             1.69
+  +subtask    3 nrn  =            23627256.      time =             1.69
+ cycle   69 number of tasks    4 seed    1.5336406855974100E+14
+  -subtask    0 seed =    1.5336406855974100E+14
+  -subtask    1 seed =    1.0484582578505000E+13
+  -subtask    2 seed =    1.2104722076080500E+14
+  -subtask    3 seed =    1.7071162072449700E+14
+  +subtask    0 nrn  =            23790750.      time =             1.63
+  +subtask    1 nrn  =            23525390.      time =             1.61
+  +subtask    2 nrn  =            23485357.      time =             1.61
+  +subtask    3 nrn  =            23628916.      time =             1.61
+ cycle   70 number of tasks    4 seed    1.2509644411226900E+14
+  -subtask    0 seed =    1.2509644411226900E+14
+  -subtask    1 seed =    1.5736463630105000E+13
+  -subtask    2 seed =    2.2404471186930100E+14
+  -subtask    3 seed =    2.0558966718960100E+14
+  +subtask    0 nrn  =            23639138.      time =             1.80
+  +subtask    1 nrn  =            23643004.      time =             1.76
+  +subtask    2 nrn  =            23556108.      time =             1.78
+  +subtask    3 nrn  =            23511050.      time =             1.75
+ cycle   71 number of tasks    4 seed    1.9560803791785300E+14
+  -subtask    0 seed =    1.9560803791785300E+14
+  -subtask    1 seed =    2.2432320040292100E+14
+  -subtask    2 seed =    1.4076455617285000E+13
+  -subtask    3 seed =    5.4759537707185000E+13
+  +subtask    0 nrn  =            23635131.      time =             1.74
+  +subtask    2 nrn  =            23397204.      time =             1.69
+  +subtask    1 nrn  =            23388607.      time =             1.75
+  +subtask    3 nrn  =            23809516.      time =             1.75
+ cycle   72 number of tasks    4 seed    2.2054218121233300E+14
+  -subtask    0 seed =    2.2054218121233300E+14
+  -subtask    1 seed =    2.5219650436537000E+13
+  -subtask    2 seed =    4.9876291966869000E+13
+  -subtask    3 seed =    1.6645438353177700E+14
+  +subtask    0 nrn  =            23510844.      time =             1.76
+  +subtask    2 nrn  =            23452014.      time =             1.75
+  +subtask    1 nrn  =            23572244.      time =             1.78
+  +subtask    3 nrn  =            23709419.      time =             1.80
+ cycle   73 number of tasks    4 seed    2.5318871365676500E+14
+  -subtask    0 seed =    2.5318871365676500E+14
+  -subtask    1 seed =    1.1611884695309700E+14
+  -subtask    2 seed =    4.9947884914981000E+13
+  -subtask    3 seed =    1.6696143323502500E+14
+  +subtask    0 nrn  =            23771951.      time =             1.62
+  +subtask    2 nrn  =            23649371.      time =             1.57
+  +subtask    3 nrn  =            23679568.      time =             1.59
+  +subtask    1 nrn  =            23835582.      time =             1.63
+ cycle   74 number of tasks    4 seed    1.5751529953070100E+14
+  -subtask    0 seed =    1.5751529953070100E+14
+  -subtask    1 seed =    5.4697949061209000E+13
+  -subtask    2 seed =    1.8596173631685300E+14
+  -subtask    3 seed =    1.7590061919401700E+14
+  +subtask    0 nrn  =            23446672.      time =             1.67
+  +subtask    2 nrn  =            23901241.      time =             1.71
+  +subtask    1 nrn  =            23784331.      time =             1.71
+  +subtask    3 nrn  =            23611947.      time =             1.72
+ cycle   75 number of tasks    4 seed    1.0786046633238100E+14
+  -subtask    0 seed =    1.0786046633238100E+14
+  -subtask    1 seed =    1.1125825376541700E+14
+  -subtask    2 seed =    1.9650644408813300E+14
+  -subtask    3 seed =    8.7547235432433000E+13
+  +subtask    0 nrn  =            23456866.      time =             1.61
+  +subtask    2 nrn  =            23660723.      time =             1.66
+  +subtask    1 nrn  =            23578484.      time =             1.66
+  +subtask    3 nrn  =            23681356.      time =             1.66
+ cycle   76 number of tasks    4 seed    4.9513345524461000E+13
+  -subtask    0 seed =    4.9513345524461000E+13
+  -subtask    1 seed =    2.9890714765049000E+13
+  -subtask    2 seed =    1.3306814273429300E+14
+  -subtask    3 seed =    1.2281867349459300E+14
+  +subtask    0 nrn  =            23414236.      time =             1.54
+  +subtask    1 nrn  =            23389938.      time =             1.51
+  +subtask    2 nrn  =            23640873.      time =             1.52
+  +subtask    3 nrn  =            23590949.      time =             1.57
+ cycle   77 number of tasks    4 seed    2.5530096849919700E+14
+  -subtask    0 seed =    2.5530096849919700E+14
+  -subtask    1 seed =    2.1050284287450000E+12
+  -subtask    2 seed =    2.5356661862757000E+13
+  -subtask    3 seed =    9.4434615035281000E+13
+  +subtask    0 nrn  =            23629468.      time =             1.57
+  +subtask    2 nrn  =            23581467.      time =             1.58
+  +subtask    3 nrn  =            23767348.      time =             1.61
+  +subtask    1 nrn  =            23606872.      time =             1.61
+ cycle   78 number of tasks    4 seed    1.5827321588583700E+14
+  -subtask    0 seed =    1.5827321588583700E+14
+  -subtask    1 seed =    4.3528155738521000E+13
+  -subtask    2 seed =    2.5926066117938100E+14
+  -subtask    3 seed =    7.2887553213130000E+12
+  +subtask    0 nrn  =            23729953.      time =             1.68
+  +subtask    1 nrn  =            23559147.      time =             1.63
+  +subtask    2 nrn  =            23616838.      time =             1.66
+  +subtask    3 nrn  =            23651247.      time =             1.65
+ cycle   79 number of tasks    4 seed    4.9621737189661000E+13
+  -subtask    0 seed =    4.9621737189661000E+13
+  -subtask    1 seed =    1.6143921575536900E+14
+  -subtask    2 seed =    4.4959339205509000E+13
+  -subtask    3 seed =    1.2353863519211300E+14
+  +subtask    0 nrn  =            24027846.      time =             1.57
+  +subtask    1 nrn  =            23428640.      time =             1.55
+  +subtask    3 nrn  =            23568446.      time =             1.54
+  +subtask    2 nrn  =            23587103.      time =             1.58
+ cycle   80 number of tasks    4 seed    3.2504888890669000E+13
+  -subtask    0 seed =    3.2504888890669000E+13
+  -subtask    1 seed =    2.1116515377976900E+14
+  -subtask    2 seed =    1.9571474255893000E+13
+  -subtask    3 seed =    1.1243520853770000E+12
+  +subtask    0 nrn  =            23507130.      time =             1.68
+  +subtask    2 nrn  =            23538970.      time =             1.71
+  +subtask    3 nrn  =            23426831.      time =             1.77
+  +subtask    1 nrn  =            23703784.      time =             1.78
+1************************************************************************************
+ *                                                                                  *
+ * Kapton 1000000.0 microns with 1.778e-01 MeV mono-energetic electron environment  *
+ *                                                                                  *
+ ************************************************************************************
+ THE PROBLEM IS  100  PERCENT COMPLETE.  AVERAGE TIME PER BATCH IS        1.587
+ THE INITIAL RANDOM NUMBER SEED OF THIS CYCLE         3.2504888890669000E+13
+ THE INITIAL RANDOM NUMBER SEED OF THIS BATCH         2.1116515377976900E+14
+ THE INITIAL RANDOM NUMBER SEED FOR THE NEXT BATCH    2.7573762924089300E+14
+ NUMBER OF RANDOM NUMBERS GENERATED IN THIS BATCH     2.3703784000000000E+07
+ CUMULATED NUMBER OF RANDOM NUMBERS GENERATED         7.5551146260000000E+09
+
+ AVERAGE SOURCE ENERGY = 1.7783E-01  0 MEV
+ ------------  HISTORY  ------------
+  PRIM       =               1600000
+  SEC        =              30096510
+  KNOCK      =              30086995
+  P E        =                  9447
+  PAIR       =                     0
+  COM        =                    68
+  AUGER      =                     0
+  BREM       =                 17395
+  RAD        =                 81678
+  XRAY       =                     0
+  REJ. LAND  =             269372667
+  REJ. PEAL  =                     0
+  PRIM STEPS =              86195293
+  SEC  STEPS =             299034034
+  NBLK       =               9270438
+  INCOH. SCAT=                   124
+  COH. SCAT  =                   104
+0                            ENERGY (MEV)      AVE ENERGY (MEV)     NUMBER/PRIMARY     NUMBER GENERATED
+ FIRST KNOCK (ABOVE TCUT)     4.0964E-02          2.4769E-03          1.6538E+01             26461203
+ TOTAL KNOCK (ABOVE TCUT)     4.3915E-02          2.3354E-03          1.8804E+01             30086995
+ PHOTO-ELECTRON               1.7613E-05          2.8665E-03          6.1444E-03                 9831
+ PAIR                         0.0000E+00          0.0000E+00          0.0000E+00                    0
+ COMPTON                      1.7904E-07          2.3102E-03          7.7500E-05                  124
+ AUGER                        0.0000E+00          0.0000E+00          0.0000E+00                    0
+ FIRST BREMSSTRAHLUNG         1.3926E-04          3.3655E-03          4.1380E-02                66208
+ TOTAL BREMSSTRAHLUNG         1.4248E-04          2.7939E-03          5.0995E-02                81592
+ X-RAY(P-IONIZATION)          0.0000E+00          0.0000E+00          0.0000E+00                    0
+ X-RAY(E-IONIZATION)          0.0000E+00          0.0000E+00          0.0000E+00                    0
+ ANNIHILATION QUANTA          0.0000E+00          0.0000E+00          0.0000E+00                    0
+
+
+ NUMBER AND ENERGY (MEV PER SOURCE PARTICLE) OF SOURCE PARTICLES REJECTED FOR BEING BELOW THE GLOBAL CUTOFF
+                    0      0.00000E+00 99
+
+
+ ELECTRON IMPACT IONIZATIONS              K SHELL        L1 SHELL        L2 SHELL        L3 SHELL         M SHELL         N SHELL
+                      COUNTS                    0               0               0               0               0               0
+          NUMBER PER PRIMARY        0.0000E+00 99   0.0000E+00 99   0.0000E+00 99   0.0000E+00 99   0.0000E+00 99   0.0000E+00 99
+
+
+ PHOTOELECTRIC IONIZATIONS                K SHELL        L1 SHELL        L2 SHELL        L3 SHELL         M SHELL         N SHELL
+                      COUNTS                 9831               0               0               0               0               0
+          NUMBER PER PRIMARY        6.1444E-03  1   0.0000E+00 99   0.0000E+00 99   0.0000E+00 99   0.0000E+00 99   0.0000E+00 99
+1
+0NUMBER ESCAPE FRACTIONS --- ELECTRON AND PHOTON GENERATED SECONDARY ELECTRONS, ANNIHILATION RADIATION, X-RAYS
+                                      THROUGH MAXIMUM-Z SURFACE
+         E-SEC         P-SEC         ANNIH
+   0.00E+00 99   0.00E+00 99   0.00E+00 99
+ X-RAYS FROM MATERIAL NO. 1, X-RAYS FROM MATERIAL NO. 2, ETC.
+   0.00E+00 99   0.00E+00 99   0.00E+00 99   0.00E+00 99
+                                      THROUGH MINIMUM-Z SURFACE
+         E-SEC         P-SEC         ANNIH
+   1.03E-02  1   0.00E+00 99   0.00E+00 99
+ X-RAYS FROM MATERIAL NO. 1, X-RAYS FROM MATERIAL NO. 2, ETC.
+   0.00E+00 99   0.00E+00 99   0.00E+00 99   0.00E+00 99
+ 
+0                                  NUMBER AND ENERGY ESCAPE FRACTIONS
+                                      THROUGH MAXIMUM-Z SURFACE
+0      --------------- ELECTRON ---------------      ---------------- PHOTON ----------------
+       NUMBER      ENERGY                COUNTS      NUMBER      ENERGY                COUNTS
+   0.00E+00 99 0.00E+00 99                    0  2.63E-03  2 4.18E-04  2                 4202
+ 
+                                      THROUGH MINIMUM-Z SURFACE
+0      --------------- ELECTRON ---------------      ---------------- PHOTON ----------------
+       NUMBER      ENERGY                COUNTS      NUMBER      ENERGY                COUNTS
+   1.88E-01  0 1.12E-01  0               300562  2.10E-03  2 2.48E-04  3                 3362
+ 
+ ENERGY ESCAPE FRACTION BELOW CUTOFF = 4.5835E-07  6
+ NET CHARGE ESCAPE FRACTION BELOW CUTOFF = 2.4375E-04  5
+ NET CHARGE ESCAPE FRACTION ABOVE CUTOFF = 1.8785E-01  0
+ ENERGY OF CUTOFF PHOTONS ASSUMED TO HAVE ESCAPED = 0.0000E+00 99
+ 
+1         BOUNDARY CURRENTS (NUMBER AND ENERGY FRACTIONS) FOR EACH LAYER
+                   ***** ONLY AT MATERIAL DISCONTINUITIES *****
+
+                          TRANSMISSION                   REFLECTION
+     LAYER           NUMBER        ENERGY           NUMBER        ENERGY
+        1          0.000E+00 99  0.000E+00 99     1.881E-01  0  1.125E-01  0
+ 
+1                                                   ENERGY DEPOSITION
+                                           (NORMALIZED TO ONE SOURCE PARTICLE)
+                              DEPTH REGION                           (MEV-CM2/G-SOURCE PARTICLE)
+ SZONE MAT.           (Z/R)                    (G/CM2)                     PRIM           E-SEC           P-SEC           TOTAL
+
+     1   4   0.0000E+00 - 2.4616E-02   0.0000E+00 - 9.9968E-04       7.3741E+00  0  -2.6149E-01  1   4.5399E-04  8   7.1131E+00  0
+     2   4   2.4616E-02 - 4.9232E-02   9.9968E-04 - 1.9994E-03       7.2833E+00  0  -9.1574E-02  4   5.1800E-04  7   7.1923E+00  0
+     3   4   4.9232E-02 - 7.3849E-02   1.9994E-03 - 2.9990E-03       7.1428E+00  0  -4.4389E-02  8   6.1631E-04  6   7.0991E+00  0
+     4   4   7.3849E-02 - 9.8465E-02   2.9990E-03 - 3.9987E-03       7.0327E+00  0  -2.2401E-02 15   6.6246E-04  7   7.0110E+00  0
+     5   4   9.8465E-02 - 1.2308E-01   3.9987E-03 - 4.9984E-03       6.9324E+00  0  -3.4593E-03 86   5.9913E-04  7   6.9296E+00  0
+     6   4   1.2308E-01 - 1.4770E-01   4.9984E-03 - 5.9981E-03       6.8283E+00  0   7.9353E-03 38   5.9533E-04  6   6.8369E+00  0
+     7   4   1.4770E-01 - 1.7231E-01   5.9981E-03 - 6.9978E-03       6.7080E+00  0   1.6118E-02 17   6.8890E-04  7   6.7248E+00  0
+     8   4   1.7231E-01 - 1.9693E-01   6.9978E-03 - 7.9974E-03       6.6086E+00  0   9.0723E-03 30   6.6552E-04  6   6.6183E+00  0
+     9   4   1.9693E-01 - 2.2155E-01   7.9974E-03 - 8.9971E-03       6.4836E+00  0   1.0783E-02 25   5.8924E-04  7   6.4950E+00  0
+    10   4   2.2155E-01 - 2.4616E-01   8.9971E-03 - 9.9968E-03       6.3890E+00  0   1.1433E-02 21   7.4788E-04  7   6.4012E+00  0
+    11   4   2.4616E-01 - 2.7078E-01   9.9968E-03 - 1.0996E-02       6.2616E+00  0   1.6558E-02 15   6.7285E-04  6   6.2788E+00  0
+    12   4   2.7078E-01 - 2.9539E-01   1.0996E-02 - 1.1996E-02       6.1289E+00  0   7.5214E-03 32   7.5141E-04  7   6.1372E+00  0
+    13   4   2.9539E-01 - 3.2001E-01   1.1996E-02 - 1.2996E-02       5.9916E+00  0   1.2511E-02 19   6.7468E-04  7   6.0048E+00  0
+    14   4   3.2001E-01 - 3.4463E-01   1.2996E-02 - 1.3996E-02       5.8490E+00  0   1.2062E-02 19   6.7532E-04  7   5.8617E+00  0
+    15   4   3.4463E-01 - 3.6924E-01   1.3996E-02 - 1.4995E-02       5.6836E+00  0   8.5948E-03 27   6.1702E-04  7   5.6928E+00  0
+    16   4   3.6924E-01 - 3.9386E-01   1.4995E-02 - 1.5995E-02       5.4937E+00  0   1.3540E-02 15   6.8999E-04  6   5.5079E+00  0
+    17   4   3.9386E-01 - 4.1848E-01   1.5995E-02 - 1.6995E-02       5.2792E+00  0   8.7711E-03 23   6.1620E-04  7   5.2886E+00  0
+    18   4   4.1848E-01 - 4.4309E-01   1.6995E-02 - 1.7994E-02       5.0723E+00  0   8.0140E-03 22   6.0925E-04  7   5.0809E+00  0
+    19   4   4.4309E-01 - 4.6771E-01   1.7994E-02 - 1.8994E-02       4.8426E+00  0   9.9819E-03 18   6.0375E-04  7   4.8532E+00  0
+    20   4   4.6771E-01 - 4.9232E-01   1.8994E-02 - 1.9994E-02       4.5923E+00  0   7.9100E-03 19   5.7773E-04  7   4.6008E+00  0
+    21   4   4.9232E-01 - 5.1694E-01   1.9994E-02 - 2.0993E-02       4.3090E+00  0   7.7331E-03 19   5.4844E-04  8   4.3172E+00  0
+    22   4   5.1694E-01 - 5.4156E-01   2.0993E-02 - 2.1993E-02       4.0184E+00  0   7.6553E-03 18   5.8444E-04  8   4.0266E+00  0
+    23   4   5.4156E-01 - 5.6617E-01   2.1993E-02 - 2.2993E-02       3.7353E+00  0   5.6189E-03 23   4.4726E-04  8   3.7414E+00  0
+    24   4   5.6617E-01 - 5.9079E-01   2.2993E-02 - 2.3992E-02       3.4070E+00  0   4.2274E-03 28   4.0068E-04  9   3.4116E+00  0
+    25   4   5.9079E-01 - 6.1541E-01   2.3992E-02 - 2.4992E-02       3.0838E+00  0   5.1767E-03 18   3.7878E-04  9   3.0894E+00  0
+    26   4   6.1541E-01 - 6.4002E-01   2.4992E-02 - 2.5992E-02       2.7586E+00  0   5.8321E-03 16   4.8017E-04 10   2.7649E+00  0
+    27   4   6.4002E-01 - 6.6464E-01   2.5992E-02 - 2.6991E-02       2.4353E+00  0   2.8663E-03 28   3.3786E-04  9   2.4385E+00  0
+    28   4   6.6464E-01 - 6.8925E-01   2.6991E-02 - 2.7991E-02       2.1127E+00  0   3.3703E-03 20   3.4673E-04 10   2.1164E+00  0
+    29   4   6.8925E-01 - 7.1387E-01   2.7991E-02 - 2.8991E-02       1.8098E+00  0   2.6801E-03 24   2.6868E-04 12   1.8128E+00  0
+    30   4   7.1387E-01 - 7.3849E-01   2.8991E-02 - 2.9990E-02       1.5037E+00  0   2.7986E-03 19   3.1319E-04 11   1.5068E+00  0
+    31   4   7.3849E-01 - 7.6310E-01   2.9990E-02 - 3.0990E-02       1.2447E+00  0   1.8659E-03 25   3.0897E-04 11   1.2468E+00  0
+    32   4   7.6310E-01 - 7.8772E-01   3.0990E-02 - 3.1990E-02       9.9416E-01  0   1.8445E-03 23   2.6275E-04 12   9.9627E-01  0
+    33   4   7.8772E-01 - 8.1234E-01   3.1990E-02 - 3.2989E-02       7.7185E-01  0   9.4495E-04 36   2.7552E-04 14   7.7307E-01  0
+    34   4   8.1234E-01 - 8.3695E-01   3.2989E-02 - 3.3989E-02       5.8224E-01  1   1.0205E-03 27   2.1733E-04 13   5.8348E-01  1
+    35   4   8.3695E-01 - 8.6157E-01   3.3989E-02 - 3.4989E-02       4.2436E-01  1   5.1338E-04 43   2.1161E-04 15   4.2508E-01  1
+    36   4   8.6157E-01 - 8.8618E-01   3.4989E-02 - 3.5988E-02       2.9652E-01  1   6.3569E-04 27   2.9829E-04 14   2.9745E-01  1
+    37   4   8.8618E-01 - 9.1080E-01   3.5988E-02 - 3.6988E-02       1.9586E-01  1   4.6923E-04 28   2.1992E-04 15   1.9654E-01  1
+    38   4   9.1080E-01 - 9.3542E-01   3.6988E-02 - 3.7988E-02       1.2624E-01  1   1.7366E-04 55   1.5479E-04 15   1.2657E-01  1
+    39   4   9.3542E-01 - 9.6003E-01   3.7988E-02 - 3.8988E-02       7.6842E-02  1   1.0585E-04 60   1.7879E-04 18   7.7126E-02  1
+    40   4   9.6003E-01 - 9.8465E-01   3.8988E-02 - 3.9987E-02       4.3549E-02  2   1.8803E-05 99   1.7335E-04 18   4.3741E-02  2
+    41   4   9.8465E-01 - 1.0093E+00   3.9987E-02 - 4.0987E-02       2.2257E-02  3   4.6015E-05 66   1.4597E-04 17   2.2449E-02  3
+    42   4   1.0093E+00 - 1.0339E+00   4.0987E-02 - 4.1987E-02       1.0967E-02  4   7.4527E-06 99   1.3850E-04 18   1.1112E-02  4
+    43   4   1.0339E+00 - 1.0585E+00   4.1987E-02 - 4.2986E-02       5.3425E-03  5   1.7920E-06 99   1.2619E-04 22   5.4705E-03  5
+    44   4   1.0585E+00 - 1.0831E+00   4.2986E-02 - 4.3986E-02       2.1197E-03  8   1.0705E-05 87   1.3551E-04 20   2.2659E-03  8
+    45   4   1.0831E+00 - 1.1077E+00   4.3986E-02 - 4.4986E-02       9.0926E-04 12   2.2450E-06 99   1.2126E-04 20   1.0328E-03 11
+    46   4   1.1077E+00 - 1.1323E+00   4.4986E-02 - 4.5985E-02       2.9411E-04 24  -1.1470E-06 99   1.1644E-04 21   4.0940E-04 18
+    47   4   1.1323E+00 - 1.1570E+00   4.5985E-02 - 4.6985E-02       4.0533E-05 50   6.7784E-22 99   7.7632E-05 27   1.1817E-04 25
+    48   4   1.1570E+00 - 1.1816E+00   4.6985E-02 - 4.7985E-02       9.7905E-06 99  -1.4913E-21 99   9.5689E-05 21   1.0548E-04 21
+    49   4   1.1816E+00 - 1.2062E+00   4.7985E-02 - 4.8984E-02       0.0000E+00 99   2.7114E-22 99   9.4186E-05 25   9.4186E-05 25
+    50   4   1.2062E+00 - 1.2308E+00   4.8984E-02 - 4.9984E-02       0.0000E+00 99   4.7449E-22 99   1.3730E-04 21   1.3730E-04 21
+
+                                                     TOTAL(MEV)      1.5790E-01  0  -2.0682E-04  1   2.0215E-05  1   1.5771E-01  0
+
+1
+                                                    CHARGE DEPOSITION
+                                           (NORMALIZED TO ONE SOURCE PARTICLE)
+                              DEPTH REGION                           (ELECTRONS-CM2/G-SOURCE PARTICLE)
+ SZONE MAT.           (Z/R)                    (G/CM2)                     PRIM           E-SEC           P-SEC           TOTAL
+
+     1   4   0.0000E+00 - 2.4616E-02   0.0000E+00 - 9.9968E-04       7.4086E+00  1  -1.2089E+01  1  -2.5008E-03 50  -4.6834E+00  3
+     2   4   2.4616E-02 - 4.9232E-02   9.9968E-04 - 1.9994E-03       1.1010E+01  1  -2.3495E+00  6   2.5008E-03 71   8.6628E+00  2
+     3   4   4.9232E-02 - 7.3849E-02   1.9994E-03 - 2.9990E-03       1.3257E+01  1  -1.1266E+00 13   6.2520E-04 99   1.2131E+01  1
+     4   4   7.3849E-02 - 9.8465E-02   2.9990E-03 - 3.9987E-03       1.4998E+01  1  -6.2395E-01 24  -1.8756E-03 99   1.4372E+01  1
+     5   4   9.8465E-02 - 1.2308E-01   3.9987E-03 - 4.9984E-03       1.6785E+01  1  -1.2879E-01 99   1.8756E-03 99   1.6658E+01  1
+     6   4   1.2308E-01 - 1.4770E-01   4.9984E-03 - 5.9981E-03       1.8236E+01  1   4.4389E-02 99  -1.2504E-03 99   1.8279E+01  1
+     7   4   1.4770E-01 - 1.7231E-01   5.9981E-03 - 6.9978E-03       1.9689E+01  1   1.1316E-01 99   3.7512E-03 58   1.9806E+01  1
+     8   4   1.7231E-01 - 1.9693E-01   6.9978E-03 - 7.9974E-03       2.1194E+01  1   5.5018E-02 99  -2.5008E-03 79   2.1246E+01  1
+     9   4   1.9693E-01 - 2.2155E-01   7.9974E-03 - 8.9971E-03       2.2554E+01  1   1.6505E-01 81  -2.5008E-03 71   2.2717E+01  1
+    10   4   2.2155E-01 - 2.4616E-01   8.9971E-03 - 9.9968E-03       2.3701E+01  1   2.6696E-01 46   2.5008E-03 71   2.3971E+01  1
+    11   4   2.4616E-01 - 2.7078E-01   9.9968E-03 - 1.0996E-02       2.4940E+01  0   4.1138E-01 32   0.0000E+00 99   2.5351E+01  1
+    12   4   2.7078E-01 - 2.9539E-01   1.0996E-02 - 1.1996E-02       2.6394E+01  0   1.1941E-01 99  -6.2520E-04 99   2.6513E+01  1
+    13   4   2.9539E-01 - 3.2001E-01   1.1996E-02 - 1.2996E-02       2.7641E+01  0   2.4008E-01 48  -1.8756E-03 99   2.7879E+01  1
+    14   4   3.2001E-01 - 3.4463E-01   1.2996E-02 - 1.3996E-02       2.8854E+01  0   1.8318E-01 71   2.5008E-03 71   2.9040E+01  1
+    15   4   3.4463E-01 - 3.6924E-01   1.3996E-02 - 1.4995E-02       2.9825E+01  0   2.2445E-01 57  -1.2504E-03 99   3.0048E+01  1
+    16   4   3.6924E-01 - 3.9386E-01   1.4995E-02 - 1.5995E-02       3.0612E+01  0   3.3698E-01 34  -6.2520E-04 99   3.0949E+01  1
+    17   4   3.9386E-01 - 4.1848E-01   1.5995E-02 - 1.6995E-02       3.1339E+01  0   2.5321E-01 47   2.5008E-03 79   3.1595E+01  1
+    18   4   4.1848E-01 - 4.4309E-01   1.6995E-02 - 1.7994E-02       3.1991E+01  0   2.1945E-01 48  -1.8756E-03 99   3.2209E+01  1
+    19   4   4.4309E-01 - 4.6771E-01   1.7994E-02 - 1.8994E-02       3.2601E+01  0   3.7137E-01 29   2.5008E-03 71   3.2975E+01  1
+    20   4   4.6771E-01 - 4.9232E-01   1.8994E-02 - 1.9994E-02       3.2930E+01  0   2.2382E-01 41  -1.2504E-03 99   3.3152E+01  1
+    21   4   4.9232E-01 - 5.1694E-01   1.9994E-02 - 2.0993E-02       3.2782E+01  0   2.8447E-01 34   6.2520E-04 99   3.3067E+01  0
+    22   4   5.1694E-01 - 5.4156E-01   2.0993E-02 - 2.1993E-02       3.2335E+01  0   2.8697E-01 32   0.0000E+00 99   3.2622E+01  1
+    23   4   5.4156E-01 - 5.6617E-01   2.1993E-02 - 2.2993E-02       3.2048E+01  0   1.7506E-01 52  -1.2504E-03 99   3.2222E+01  1
+    24   4   5.6617E-01 - 5.9079E-01   2.2993E-02 - 2.3992E-02       3.0915E+01  0   1.1254E-01 75   1.2504E-03 99   3.1029E+01  1
+    25   4   5.9079E-01 - 6.1541E-01   2.3992E-02 - 2.4992E-02       2.9800E+01  0   2.8259E-01 27  -1.2504E-03 99   3.0081E+01  1
+    26   4   6.1541E-01 - 6.4002E-01   2.4992E-02 - 2.5992E-02       2.8285E+01  0   2.0256E-01 36  -6.2520E-04 99   2.8487E+01  1
+    27   4   6.4002E-01 - 6.6464E-01   2.5992E-02 - 2.6991E-02       2.6492E+01  0   1.4942E-01 44   6.2520E-04 99   2.6642E+01  1
+    28   4   6.6464E-01 - 6.8925E-01   2.6991E-02 - 2.7991E-02       2.4431E+01  0   1.7506E-01 33   0.0000E+00 99   2.4606E+01  1
+    29   4   6.8925E-01 - 7.1387E-01   2.7991E-02 - 2.8991E-02       2.2263E+01  1   1.3004E-01 41   0.0000E+00 99   2.2393E+01  1
+    30   4   7.1387E-01 - 7.3849E-01   2.8991E-02 - 2.9990E-02       1.9497E+01  1   1.7943E-01 28  -6.2520E-04 99   1.9676E+01  1
+    31   4   7.3849E-01 - 7.6310E-01   2.9990E-02 - 3.0990E-02       1.7387E+01  1   1.3817E-01 33   6.2520E-04 99   1.7526E+01  1
+    32   4   7.6310E-01 - 7.8772E-01   3.0990E-02 - 3.1990E-02       1.4768E+01  1   8.8153E-02 45  -6.2520E-04 99   1.4856E+01  1
+    33   4   7.8772E-01 - 8.1234E-01   3.1990E-02 - 3.2989E-02       1.2144E+01  1   7.1898E-02 48  -1.2504E-03 99   1.2215E+01  1
+    34   4   8.1234E-01 - 8.3695E-01   3.2989E-02 - 3.3989E-02       9.8088E+00  1   7.8775E-02 38   1.8756E-03 88   9.8894E+00  1
+    35   4   8.3695E-01 - 8.6157E-01   3.3989E-02 - 3.4989E-02       7.5887E+00  1   6.2520E-03 99  -1.8756E-03 58   7.5931E+00  1
+    36   4   8.6157E-01 - 8.8618E-01   3.4989E-02 - 3.5988E-02       5.6274E+00  1   7.5024E-02 26   1.8756E-03 58   5.7043E+00  1
+    37   4   8.8618E-01 - 9.1080E-01   3.5988E-02 - 3.6988E-02       3.9281E+00  1   4.1888E-02 39   0.0000E+00 99   3.9700E+00  1
+    38   4   9.1080E-01 - 9.3542E-01   3.6988E-02 - 3.7988E-02       2.7034E+00  2  -6.8772E-03 99  -1.8756E-03 88   2.6946E+00  2
+    39   4   9.3542E-01 - 9.6003E-01   3.7988E-02 - 3.8988E-02       1.7731E+00  2   2.4383E-02 41  -6.2520E-04 99   1.7968E+00  2
+    40   4   9.6003E-01 - 9.8465E-01   3.8988E-02 - 3.9987E-02       1.0797E+00  2   5.0016E-03 99   3.7512E-03 41   1.0885E+00  2
+    41   4   9.8465E-01 - 1.0093E+00   3.9987E-02 - 4.0987E-02       5.6768E-01  3   8.1276E-03 68  -1.8756E-03 58   5.7393E-01  3
+    42   4   1.0093E+00 - 1.0339E+00   4.0987E-02 - 4.1987E-02       2.9760E-01  5  -6.2520E-04 99   6.2520E-04 99   2.9760E-01  5
+    43   4   1.0339E+00 - 1.0585E+00   4.1987E-02 - 4.2986E-02       1.5505E-01  6   6.2520E-04 99  -1.2504E-03 99   1.5442E-01  7
+    44   4   1.0585E+00 - 1.0831E+00   4.2986E-02 - 4.3986E-02       6.1895E-02 10   6.2520E-04 99   1.2504E-03 99   6.3770E-02 10
+    45   4   1.0831E+00 - 1.1077E+00   4.3986E-02 - 4.4986E-02       3.1885E-02 13   1.2504E-03 71   0.0000E+00 99   3.3136E-02 13
+    46   4   1.1077E+00 - 1.1323E+00   4.4986E-02 - 4.5985E-02       1.1254E-02 28  -6.2520E-04 99  -1.2504E-03 99   9.3780E-03 36
+    47   4   1.1323E+00 - 1.1570E+00   4.5985E-02 - 4.6985E-02       1.8756E-03 58   0.0000E+00 99   1.8756E-03 58   3.7512E-03 41
+    48   4   1.1570E+00 - 1.1816E+00   4.6985E-02 - 4.7985E-02       6.2520E-04 99   0.0000E+00 99  -6.2520E-04 99   0.0000E+00 99
+    49   4   1.1816E+00 - 1.2062E+00   4.7985E-02 - 4.8984E-02       0.0000E+00 99   0.0000E+00 99  -6.2520E-04 99  -6.2520E-04 99
+    50   4   1.2062E+00 - 1.2308E+00   4.8984E-02 - 4.9984E-02       0.0000E+00 99   0.0000E+00 99   6.2520E-04 99   6.2520E-04 99
+
+                                                         TOTAL       8.2248E-01  0  -1.0577E-02  1   0.0000E+00 99   8.1190E-01  0
+ 
+0 THE ENERGY CONSERVATION FRACTION IS      1.0000083E+00  0
+0 THE CHARGE CONSERVATION FRACTION IS      1.0000000E+00  0
+
+ THE NUMBER OF DATA FOR WHICH STATISTICAL ESTIMATES HAVE BEEN PROVIDED IS          522 FROM AN ALLOCATION OF          522
+ A wall-clock timer was used.
+                        Startup time (s) =             0.00
+              Allocation sizing time (s) =             0.00
+               Input processing time (s) =             0.12
+           Batch initialization time (s) =             0.00
+              Output processing time (s) =             0.49
+              Monte Carlo cycle time (s) =           128.66
+            Longest Monte Carlo time (s) =             1.99
+              Elapsed execution time (s) =           129.16
+         Cumulative Monte Carlo time (s) =           507.80
+      Average Monte Carlo batch time (s) =             1.59
+    Average Monte Carlo history time (s) =    3.174E-04

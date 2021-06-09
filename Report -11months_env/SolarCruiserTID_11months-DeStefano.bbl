@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -14,6 +14,11 @@ Pelliccioni, M., Overview of fluence-to-effective dose and fluence-to-ambient
   dose equivalent conversion coefficients for high energy radiation calculated
   using the fluka code, \textit{Radiation Protection Dosimetry},
   \textit{88}(4), 279--297, 2000.
+
+\bibitem[{\textit{Ziegler}(2004)}]{ziegler2004srim}
+Ziegler, J.~F., Srim-2003, \textit{Nuclear instruments and methods in physics
+  research section B: Beam interactions with materials and atoms},
+  \textit{219}, 1027--1036, 2004.
 
 \bibitem[{\textit{Ziegler et~al.}(2010)\textit{Ziegler, Ziegler, and
   Biersack}}]{ziegler2010srim}

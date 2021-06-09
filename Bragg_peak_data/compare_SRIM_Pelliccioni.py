@@ -4,6 +4,8 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
+# python .\compare_SRIM_Pelliccioni.py .\total_dose_vs_E.txt .\Pelliccioni2000-Table_A2.7_ProtonDoseEquivPerFluence.txt
+
 TRIM_dose_vs_E_filename            = sys.argv[1]
 Pelliccioni2000_dose_vs_E_filename = sys.argv[2]
 
