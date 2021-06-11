@@ -1,0 +1,17 @@
+ECHO 1
+TITLE
+Kapton 462670.9125083215 microns with 5.623e+01 MeV mono-energetic electron environment
+GEOMETRY 1
+
+4 50 46.26709125083215 * Kapton as RCD (cm)
+************************* SOURCE ********************************
+* energy (MeV)
+ELECTRONS
+ENERGY 56.23413251903491
+
+DIRECTION 0.0
+CUTOFFS 0.1 0.1 * electron and photon cut-offs (MeV)
+
+* run size options
+HISTORIES-PER-BATCH 5000
+BATCHES 320

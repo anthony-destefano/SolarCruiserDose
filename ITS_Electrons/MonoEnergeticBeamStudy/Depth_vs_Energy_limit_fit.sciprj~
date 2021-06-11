@@ -1,0 +1,1341 @@
+SciDAVis 1.26.0 project file
+<scripting-lang>	muParser
+<windows>	3
+<table>
+2522
+<table creation_time="2021-09-06 12:44:37:741" caption_spec="%n%C{ - }%c" name="Table1" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2021-09-06 12:44:37:741" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2021-09-06 12:44:37:741" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2021-09-06 12:44:37:741" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">3.2500000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">4.2500000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">5.2500000000000000e+00</row><row type="TypeDouble" index="3" invalid="no">6.2500000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">7.2500000000000000e+00</row><row type="TypeDouble" index="5" invalid="no">8.2500000000000000e+00</row><row type="TypeDouble" index="6" invalid="no">9.0000000000000000e+00</row></column><column creation_time="2021-09-06 12:44:37:742" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2021-09-06 12:44:37:742" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2021-09-06 12:44:37:742" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">-7.8093966800000003e-01</row><row type="TypeDouble" index="1" invalid="no">8.7852179600000002e-01</row><row type="TypeDouble" index="2" invalid="no">2.5710096720000002e+00</row><row type="TypeDouble" index="3" invalid="no">3.9030899870000000e+00</row><row type="TypeDouble" index="4" invalid="no">4.9365137419999998e+00</row><row type="TypeDouble" index="5" invalid="no">5.8375884380000000e+00</row><row type="TypeDouble" index="6" invalid="no">6.3113299520000004e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	0	-10	589	448	
+
+</table>
+<multiLayer>
+Graph2	1	1	6/9/2021 12:48:06 PM
+geometry	783	127	500	400	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	425	236
+Alignement	0	0
+<graph>
+ggeometry	5	5	475	317
+PlotTitle	Title	#ff000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffffff	255
+Margin	0
+Border	0	#ff000000
+grid	0	0	0	0	#ff0000ff	0	0	#ffa0a0a4	2	0	#ff0000ff	0	0	#ffa0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	X Axis Title	Y Axis Title			
+AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
+AxesTitleAlignment	5124	4	5124	4
+TitleFont	MS Shell Dlg 2	10	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	8	75	0	0	0
+AxisFont0	MS Shell Dlg 2	8	50	0	0	0
+AxisFont1	MS Shell Dlg 2	8	50	0	0	0
+AxisFont2	MS Shell Dlg 2	8	50	0	0	0
+AxisFont3	MS Shell Dlg 2	8	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesNumberColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffffff	255
+curve	Table1_1	Table1_2	2	1	#ff000000	0	1	7	1	#ff000000	#ff000000	0	#ff000000	14	1	0	64		2	0	0	29	1
+FunctionCurve	0,NonLinearFit1,x,3.25,9	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	14	0	16	64		2	0	71311824	1263159624	1
+<formula>
+a=5166.34783101384
+b=-1.6857835240442
+c=7.40734116182052
+d=-0.782118352592623
+
+A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+</formula>
+FunctionCurve	0,NonLinearFit2,x,3.25,9	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	14	0	16	64		2	0	71312024	1263159624	1
+<formula>
+a=5166.31848662149
+b=-1.68578108811678
+c=7.40721124382498
+d=-0.782117566508119
+
+A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+</formula>
+FunctionCurve	0,NonLinearFit3,x,3.25,9	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	14	0	16	64		2	0	71312784	1263159624	1
+<formula>
+a=5166.31826910252
+b=-1.68578114031528
+c=7.40724337725343
+d=-0.782117768474766
+
+A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+</formula>
+FunctionCurve	0,NonLinearFit4,x,3.25,9	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	14	0	16	64		2	0	71311344	1263159624	1
+<formula>
+a=5166.33302166916
+b=-1.68578212329307
+c=7.40723355583805
+d=-0.782117698821368
+
+A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+</formula>
+scale	0	-2	7	0	8	5	0	0
+scale	1	-1	7	0	8	5	0	0
+scale	2	3	10	0	8	5	0	0
+scale	3	3	10	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	3.15873015873016	6.7444089456869	MS Shell Dlg 2	8	50	0	0	0	#ff000000	1	0	#ffffff	0	\c{1}Table1_2	\c{2}NonLinearFit1	\c{3}NonLinearFit2	\c{4}NonLinearFit3	\c{5}NonLinearFit4	</legend>
+</graph>
+</multiLayer>
+<multiLayer>
+Graph3	1	1	6/9/2021 1:02:12 PM
+geometry	589	0	500	400	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	425	236
+Alignement	0	0
+<graph>
+ggeometry	5	5	475	317
+PlotTitle	Title	#ff000000	4228
+<Antialiasing>1</Antialiasing>
+Background	#ffffffff	255
+Margin	0
+Border	0	#ff000000
+grid	0	0	0	0	#ff0000ff	0	0	#ffa0a0a4	2	0	#ff0000ff	0	0	#ffa0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	X Axis Title	Y Axis Title			
+AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
+AxesTitleAlignment	5124	4	5124	4
+TitleFont	MS Shell Dlg 2	10	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	8	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	8	75	0	0	0
+AxisFont0	MS Shell Dlg 2	8	50	0	0	0
+AxisFont1	MS Shell Dlg 2	8	50	0	0	0
+AxisFont2	MS Shell Dlg 2	8	50	0	0	0
+AxisFont3	MS Shell Dlg 2	8	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesNumberColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffffff	255
+curve	Table1_1	Table1_2	2	1	#ff000000	0	1	7	1	#ff000000	#ff000000	0	#ff000000	14	1	0	64		2	0	0	29	1
+FunctionCurve	0,NonLinearFit1,x,3.25,9	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	14	0	16	64		2	0	67156376	1263159624	1
+<formula>
+A=0.20877385876335
+a=2039.94066725814
+b=-1.68579164649142
+d=-0.782135800518919
+
+log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+</formula>
+FunctionCurve	0,NonLinearFit2,x,3.25,9	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	14	0	16	64		2	0	67156496	1263159624	1
+<formula>
+A=0.208857365496612
+a=2040.41564223818
+b=-1.68578084827647
+d=-0.782114844782545
+
+log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+</formula>
+FunctionCurve	0,NonLinearFit3,x,3.25,9	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	14	0	16	64		2	0	67780496	1263159624	1
+<formula>
+A=0.208844927833918
+a=2040.34590897551
+b=-1.68578191381078
+d=-0.78211802457456
+
+log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+</formula>
+FunctionCurve	0,NonLinearFit4,x,3.25,9	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	14	0	16	64		2	0	67780456	1263159624	1
+<formula>
+A=0.208844927833918
+a=2040.34590897551
+b=-1.68578191381078
+d=-0.78211802457456
+
+log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+</formula>
+scale	0	-2	7	0	8	5	0	0
+scale	1	-1	7	0	8	5	0	0
+scale	2	3	10	0	8	5	0	0
+scale	3	3	10	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	3.15873015873016	6.7444089456869	MS Shell Dlg 2	8	50	0	0	0	#ff000000	1	0	#ffffff	0	\c{1}Table1_2	\c{2}NonLinearFit1	\c{3}NonLinearFit2	\c{4}NonLinearFit3	\c{5}NonLinearFit4	</legend>
+</graph>
+</multiLayer>
+<log>
+[6/9/2021 12:46:29 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.09900548377535 +/- 10,468,367.5057533
+b  = 1.23640652049901 +/- 9,148.37775532479
+c  = 9.09902509437843 +/- 10,468,367.4251741
+d  = 1.23641296288134 +/- 9,149.02355426212
+--------------------------------------------------------------------------------------
+Chi^2 = 0.97025088392935
+R^2 = 0.976650882372659
+---------------------------------------------------------------------------------------
+Iterations = 68
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:30 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.11248352235597 +/- 11,510,724.302787
+b  = 1.23630500553623 +/- 1,096.32890864816
+c  = 9.1118981576466 +/- 11,509,634.3151802
+d  = 1.23624497377907 +/- 1,140.94876193682
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247206638466
+R^2 = 0.976650970866778
+---------------------------------------------------------------------------------------
+Iterations = 3
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:31 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.11249178797921 +/- 17,496,814.9098087
+b  = 1.23627488342717 +/- 10,680,878.167826
+c  = 9.11190921812102 +/- 17,490,496.6533288
+d  = 1.23627488589897 +/- 10,680,034.3162443
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189620563
+R^2 = 0.976650971276314
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:31 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.11249178797921 +/- 66,385,819.9619055
+b  = 1.23627488342717 +/- 24,682,876.1765322
+c  = 9.11190921812102 +/- 66,387,675.1636899
+d  = 1.23627488589897 +/- 24,680,925.368765
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189620563
+R^2 = 0.976650971276314
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:32 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.11249178797921 +/- 66,385,819.9619055
+b  = 1.23627488342717 +/- 24,682,876.1765322
+c  = 9.11190921812102 +/- 66,387,675.1636899
+d  = 1.23627488589897 +/- 24,680,925.368765
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189620563
+R^2 = 0.976650971276314
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:37 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Nelder-Mead Simplex algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10335173968943 +/- 22,283,722.3149932
+b  = 1.23627477675204 +/- 8,046,073.89627974
+c  = 9.12107781503973 +/- 22,375,435.5391322
+d  = 1.23627478165396 +/- 8,065,447.63938882
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 130
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:38 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Nelder-Mead Simplex algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 12,557,432.6205754
+b  = 1.23627478059939 +/- 6,125,219.3070446
+c  = 9.12127475862489 +/- 12,610,019.7280565
+d  = 1.23627477950601 +/- 6,140,295.03985228
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 132
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:39 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Nelder-Mead Simplex algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:40 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Nelder-Mead Simplex algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:41 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Nelder-Mead Simplex algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:43 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:44 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:45 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:45 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:47 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:48 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:48 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:48 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:46:48 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = -2.75 to x = 3
+a  = 9.10315573281054 +/- 25,967,082.7978834
+b  = 1.23627478059939 +/- 9,510,944.2938583
+c  = 9.12127475862489 +/- 26,014,115.3613304
+d  = 1.23627477950601 +/- 9,534,353.04022728
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189619997
+R^2 = 0.976650971276328
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:49:30 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 0.00380526462945938 +/- 9.78824615424863e+20
+b  = -1.46160893697418 +/- 3.03773156511164e+22
+c  = 3,024.21479987916 +/- 3,147.99164602495
+d  = 1.23627803122113 +/- 0.150014145001747
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247194610682
+R^2 = 0.976650971156227
+---------------------------------------------------------------------------------------
+Iterations = 17
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:49:31 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 0.00380526462945938 +/- 451,844,575.230108
+b  = -1.46160893697418 +/- 12,332,462,782.8331
+c  = 3,024.21479987916 +/- 4,211.26609738921
+d  = 1.23627803122113 +/- 0.189044849205505
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247194610682
+R^2 = 0.976650971156227
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:49:31 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 0.00380526462945938 +/- 451,844,575.230108
+b  = -1.46160893697418 +/- 12,332,462,782.8331
+c  = 3,024.21479987916 +/- 4,211.26609738921
+d  = 1.23627803122113 +/- 0.189044849205505
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247194610682
+R^2 = 0.976650971156227
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:49:32 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 0.00380526462945938 +/- 451,844,575.230108
+b  = -1.46160893697418 +/- 12,332,462,782.8331
+c  = 3,024.21479987916 +/- 4,211.26609738921
+d  = 1.23627803122113 +/- 0.189044849205505
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247194610682
+R^2 = 0.976650971156227
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:49:32 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 0.00380526462945938 +/- 451,844,575.230108
+b  = -1.46160893697418 +/- 12,332,462,782.8331
+c  = 3,024.21479987916 +/- 4,211.26609738921
+d  = 1.23627803122113 +/- 0.189044849205505
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247194610682
+R^2 = 0.976650971156227
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:49:32 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 0.00380526462945938 +/- 451,844,575.230108
+b  = -1.46160893697418 +/- 12,332,462,782.8331
+c  = 3,024.21479987916 +/- 4,211.26609738921
+d  = 1.23627803122113 +/- 0.189044849205505
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247194610682
+R^2 = 0.976650971156227
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:49:32 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 0.00380526462945938 +/- 451,844,575.230108
+b  = -1.46160893697418 +/- 12,332,462,782.8331
+c  = 3,024.21479987916 +/- 4,211.26609738921
+d  = 1.23627803122113 +/- 0.189044849205505
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247194610682
+R^2 = 0.976650971156227
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:49:46 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 27.8132877383274 +/- 0
+b  = -6.57847817303693 +/- 0
+c  = 3,024.1900642345 +/- 2,086.51527901648
+d  = 1.23627774849374 +/- 0.11036652412677
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247189973525
+R^2 = 0.97665097126782
+---------------------------------------------------------------------------------------
+Iterations = 27
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:36 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: d=0.8
+b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 483.313544163269 +/- 11,690,340.1775527
+c  = 146.834134684621 +/- 1,369,370.22325319
+--------------------------------------------------------------------------------------
+Chi^2 = 6.02433933992002
+R^2 = 0.855024086857668
+---------------------------------------------------------------------------------------
+Iterations = 16
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:37 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: d=0.8
+b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 483.313544163269 +/- 12,203,465.3660287
+c  = 146.834134684621 +/- 1,429,497.07645985
+--------------------------------------------------------------------------------------
+Chi^2 = 6.02433933992002
+R^2 = 0.855024086857668
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:37 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: d=0.8
+b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 483.313544163269 +/- 12,203,465.3660287
+c  = 146.834134684621 +/- 1,429,497.07645985
+--------------------------------------------------------------------------------------
+Chi^2 = 6.02433933992002
+R^2 = 0.855024086857668
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:38 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: d=0.8
+b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 483.313544163269 +/- 12,203,465.3660287
+c  = 146.834134684621 +/- 1,429,497.07645985
+--------------------------------------------------------------------------------------
+Chi^2 = 6.02433933992002
+R^2 = 0.855024086857668
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:39 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: d=0.8
+b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 483.313544163269 +/- 12,203,465.3660287
+c  = 146.834134684621 +/- 1,429,497.07645985
+--------------------------------------------------------------------------------------
+Chi^2 = 6.02433933992002
+R^2 = 0.855024086857668
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:39 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: d=0.8
+b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 483.313544163269 +/- 12,203,465.3660287
+c  = 146.834134684621 +/- 1,429,497.07645985
+--------------------------------------------------------------------------------------
+Chi^2 = 6.02433933992002
+R^2 = 0.855024086857668
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:39 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: d=0.8
+b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 483.313544163269 +/- 12,203,465.3660287
+c  = 146.834134684621 +/- 1,429,497.07645985
+--------------------------------------------------------------------------------------
+Chi^2 = 6.02433933992002
+R^2 = 0.855024086857668
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:39 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: d=0.8
+b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 483.313544163269 +/- 12,203,465.3660287
+c  = 146.834134684621 +/- 1,429,497.07645985
+--------------------------------------------------------------------------------------
+Chi^2 = 6.02433933992002
+R^2 = 0.855024086857668
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:42 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 683,208.101688075 +/- 11,973,314.9444546
+c  = 3,029.28301171092 +/- 2,372.21687215815
+d  = 1.23637682816707 +/- 0.108576560706406
+--------------------------------------------------------------------------------------
+Chi^2 = 0.976614759251641
+R^2 = 0.976497735515565
+---------------------------------------------------------------------------------------
+Iterations = 16
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:42 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 26,598,096.1013647 +/- 0
+c  = 3,024.44429518313 +/- 1,808.30023248742
+d  = 1.23628118395465 +/- 0.0956190042149767
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970587500245541
+R^2 = 0.976642781690565
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:43 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 26,598,096.1013647 +/- 0
+c  = 3,024.28497786635 +/- 1,808.24887902854
+d  = 1.23627632603849 +/- 0.0956127670866327
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970587500183069
+R^2 = 0.976642781692068
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:44 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 26,598,096.1013647 +/- 0
+c  = 3,024.33060241502 +/- 1,808.35745538227
+d  = 1.2362766025764 +/- 0.0956331155884485
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970587499949669
+R^2 = 0.976642781697685
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:47 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: b=0.8
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 26,598,096.1013647 +/- 0
+c  = 3,024.31572183496 +/- 1,808.36053403905
+d  = 1.23627669250757 +/- 0.0956323741431579
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970587499912688
+R^2 = 0.976642781698575
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:51 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 26,598,096.1013647 +/- 0
+b  = 1.23623990241888 +/- 11,239,415.7127488
+c  = 3,024.22630766241 +/- 3,322,259.57960204
+d  = 1.23627760292358 +/- 149.608845497827
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247190018905
+R^2 = 0.976650971266728
+---------------------------------------------------------------------------------------
+Iterations = 6
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:52 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 26,598,096.1013647 +/- 0
+b  = 1.23623990241888 +/- 11,297,842.9386026
+c  = 3,024.22630766241 +/- 3,338,697.12129142
+d  = 1.23627760292358 +/- 150.225396858004
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247190018905
+R^2 = 0.976650971266728
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:52 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 26,598,096.1013647 +/- 0
+b  = 1.23623990241888 +/- 11,297,842.9386026
+c  = 3,024.22630766241 +/- 3,338,697.12129142
+d  = 1.23627760292358 +/- 150.225396858004
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247190018905
+R^2 = 0.976650971266728
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:50:53 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 26,598,096.1013647 +/- 0
+b  = 1.23623990241888 +/- 11,297,842.9386026
+c  = 3,024.22630766241 +/- 3,338,697.12129142
+d  = 1.23627760292358 +/- 150.225396858004
+--------------------------------------------------------------------------------------
+Chi^2 = 0.970247190018905
+R^2 = 0.976650971266728
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:52:45 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: d=0.5
+b=2
+log10( ((10^x)/a)^b + ((10^x)/c)^d )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 161,557.760714047 +/- 127,962.122938586
+c  = 87.149414116249 +/- 274.882627526701
+--------------------------------------------------------------------------------------
+Chi^2 = 7.53111600645689
+R^2 = 0.818763459624202
+---------------------------------------------------------------------------------------
+Iterations = 34
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:55:59 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: d=-0.5
+b=-2
+A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 6,815.14445977331 +/- 1,621.57751169723
+c  = 0.000970972207031419 +/- 0.000883697691165396
+--------------------------------------------------------------------------------------
+Chi^2 = 0.646219846626927
+R^2 = 0.984448699339589
+---------------------------------------------------------------------------------------
+Iterations = 13
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:05 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33381821162 +/- 289.876954475665
+b  = -1.68577583479894 +/- 0.0465702553009784
+c  = 7.40629858134565 +/- 7.76807380944151
+d  = -0.782112200802684 +/- 0.0481170735705395
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501662279412
+R^2 = 0.999746109922367
+---------------------------------------------------------------------------------------
+Iterations = 30
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:06 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33381821162 +/- 289.908257654602
+b  = -1.68577583479894 +/- 0.0465655232379696
+c  = 7.40629858134565 +/- 7.76812494155696
+d  = -0.782112200802684 +/- 0.0481174426742307
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501662279412
+R^2 = 0.999746109922367
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:07 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33381821162 +/- 289.908257654602
+b  = -1.68577583479894 +/- 0.0465655232379696
+c  = 7.40629858134565 +/- 7.76812494155696
+d  = -0.782112200802684 +/- 0.0481174426742307
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501662279412
+R^2 = 0.999746109922367
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:08 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33381821162 +/- 289.908257654602
+b  = -1.68577583479894 +/- 0.0465655232379696
+c  = 7.40629858134565 +/- 7.76812494155696
+d  = -0.782112200802684 +/- 0.0481174426742307
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501662279412
+R^2 = 0.999746109922367
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:10 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.34783101384 +/- 289.903804766107
+b  = -1.6857835240442 +/- 0.046570253210767
+c  = 7.40734116182052 +/- 7.76899500930389
+d  = -0.782118352592623 +/- 0.0481168832733648
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661629695
+R^2 = 0.999746109923931
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:12 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.31848662149 +/- 289.895419512964
+b  = -1.68578108811678 +/- 0.0465683294977292
+c  = 7.40721124382498 +/- 7.76879803743351
+d  = -0.782117566508119 +/- 0.0481164786585534
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661479677
+R^2 = 0.999746109924292
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:13 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.31826910252 +/- 289.887478417813
+b  = -1.68578114031528 +/- 0.046568888435197
+c  = 7.40724337725343 +/- 7.76888300428458
+d  = -0.782117768474766 +/- 0.0481167129872968
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661479312
+R^2 = 0.999746109924293
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:13 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33302166916 +/- 289.890598417478
+b  = -1.68578212329307 +/- 0.0465652353423816
+c  = 7.40723355583805 +/- 7.76883036937727
+d  = -0.782117698821368 +/- 0.0481165507967775
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661463732
+R^2 = 0.99974610992433
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:13 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33302166916 +/- 289.906684643047
+b  = -1.68578212329307 +/- 0.0465662855673725
+c  = 7.40723355583805 +/- 7.76876639889052
+d  = -0.782117698821368 +/- 0.048116099492813
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661463731
+R^2 = 0.99974610992433
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:14 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33302166916 +/- 289.906684643047
+b  = -1.68578212329307 +/- 0.0465662855673725
+c  = 7.40723355583805 +/- 7.76876639889052
+d  = -0.782117698821368 +/- 0.048116099492813
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661463731
+R^2 = 0.99974610992433
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:14 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33302166916 +/- 289.906684643047
+b  = -1.68578212329307 +/- 0.0465662855673725
+c  = 7.40723355583805 +/- 7.76876639889052
+d  = -0.782117698821368 +/- 0.048116099492813
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661463731
+R^2 = 0.99974610992433
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:15 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33302166916 +/- 289.906684643047
+b  = -1.68578212329307 +/- 0.0465662855673725
+c  = 7.40723355583805 +/- 7.76876639889052
+d  = -0.782117698821368 +/- 0.048116099492813
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661463731
+R^2 = 0.99974610992433
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:16 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33302166916 +/- 289.906684643047
+b  = -1.68578212329307 +/- 0.0465662855673725
+c  = 7.40723355583805 +/- 7.76876639889052
+d  = -0.782117698821368 +/- 0.048116099492813
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661463731
+R^2 = 0.99974610992433
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:20 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33302166916 +/- 289.906684643047
+b  = -1.68578212329307 +/- 0.0465662855673725
+c  = 7.40723355583805 +/- 7.76876639889052
+d  = -0.782117698821368 +/- 0.048116099492813
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661463731
+R^2 = 0.99974610992433
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:21 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33302166916 +/- 289.906684643047
+b  = -1.68578212329307 +/- 0.0465662855673725
+c  = 7.40723355583805 +/- 7.76876639889052
+d  = -0.782117698821368 +/- 0.048116099492813
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661463731
+R^2 = 0.99974610992433
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:21 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33302166916 +/- 289.906684643047
+b  = -1.68578212329307 +/- 0.0465662855673725
+c  = 7.40723355583805 +/- 7.76876639889052
+d  = -0.782117698821368 +/- 0.048116099492813
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661463731
+R^2 = 0.99974610992433
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 12:56:31 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: A=1
+log10( A / ( ((10^x)/a)^b + ((10^x)/c)^d ) )
+Y standard errors: Unknown
+Unscaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+a  = 5,166.33302166916 +/- 289.906684643047
+b  = -1.68578212329307 +/- 0.0465662855673725
+c  = 7.40723355583805 +/- 7.76876639889052
+d  = -0.782117698821368 +/- 0.048116099492813
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661463731
+R^2 = 0.99974610992433
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 1:02:44 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+A  = 0.20877385876335 +/- 0.191247219975203
+a  = 2,039.94066725814 +/- 1,086.11633313202
+b  = -1.68579164649142 +/- 0.0465627080838579
+d  = -0.782135800518919 +/- 0.0481112526748814
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501665970008
+R^2 = 0.999746109913486
+---------------------------------------------------------------------------------------
+Iterations = 39
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 1:02:52 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+A  = 0.208857365496612 +/- 0.191343161340388
+a  = 2,040.41564223818 +/- 1,086.58055653882
+b  = -1.68578084827647 +/- 0.0465456014440887
+d  = -0.782114844782545 +/- 0.0481160578006651
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661624948
+R^2 = 0.999746109923942
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 1:02:53 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+A  = 0.208857365496612 +/- 0.191313669845863
+a  = 2,040.41564223818 +/- 1,086.36080590359
+b  = -1.68578084827647 +/- 0.0465560513926349
+d  = -0.782114844782545 +/- 0.048109659053042
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661624948
+R^2 = 0.999746109923942
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 1:02:54 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+A  = 0.208857365496612 +/- 0.191313669845863
+a  = 2,040.41564223818 +/- 1,086.36080590359
+b  = -1.68578084827647 +/- 0.0465560513926349
+d  = -0.782114844782545 +/- 0.048109659053042
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661624948
+R^2 = 0.999746109923942
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 1:02:56 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+Y standard errors: Unknown
+Nelder-Mead Simplex algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+A  = 0.208844927833918 +/- 0.191606464442978
+a  = 2,040.34590897551 +/- 1,088.01130015016
+b  = -1.68578191381078 +/- 0.0465874185626544
+d  = -0.78211802457456 +/- 0.0481754528878944
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661446817
+R^2 = 0.999746109924371
+---------------------------------------------------------------------------------------
+Iterations = 129
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 1:02:57 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+Y standard errors: Unknown
+Nelder-Mead Simplex algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+A  = 0.208844927833918 +/- 0.191343647598907
+a  = 2,040.34590897551 +/- 1,086.55105925107
+b  = -1.68578191381078 +/- 0.0465631389857021
+d  = -0.78211802457456 +/- 0.0481193658224912
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661446817
+R^2 = 0.999746109924371
+---------------------------------------------------------------------------------------
+Iterations = 138
+Status = success
+---------------------------------------------------------------------------------------
+[6/9/2021 1:02:59 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+A  = 0.208844927833918 +/- 0.191343647598907
+a  = 2,040.34590897551 +/- 1,086.55105925107
+b  = -1.68578191381078 +/- 0.0465631389857021
+d  = -0.78211802457456 +/- 0.0481193658224912
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661446817
+R^2 = 0.999746109924371
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[6/9/2021 1:03:00 PM	Plot: '''']
+Non-linear fit of dataset: Table1_2, using function: log10( A / ( ((10^x)/a)^b + ((10^x))^d ) )
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 3.25 to x = 9
+A  = 0.208844927833918 +/- 0.191343647598907
+a  = 2,040.34590897551 +/- 1,086.55105925107
+b  = -1.68578191381078 +/- 0.0465631389857021
+d  = -0.78211802457456 +/- 0.0481193658224912
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0105501661446817
+R^2 = 0.999746109924371
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+</log>

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  8 JUN 2021 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  9 JUN 2021 12:41
 entering extended mode
 **./SolarCruiserTID_11months-DeStefano.tex
 (SolarCruiserTID_11months-DeStefano.tex
@@ -1237,18 +1237,14 @@ your preamble.
 
 {C:/Users/adestefa/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (SolarCr
 uiserTID_11months-DeStefano.lof
-Overfull \hbox (1.78635pt too wide) in paragraph at lines 2--2
- [][] [][][]\OT1/phv/m/n/10 Left axis: Depth in Kap-ton vs. en-ergy for var-i-o
-us dose-depth per-centiles. 
- []
-
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 3.
 )
 \tf@lof=\write6
 \openout6 = `SolarCruiserTID_11months-DeStefano.lof'.
 
- (SolarCruiserTID_11months-DeStefano.lot)
+
+(SolarCruiserTID_11months-DeStefano.lot)
 \tf@lot=\write7
 \openout7 = `SolarCruiserTID_11months-DeStefano.lot'.
 
@@ -1492,7 +1488,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 518.
 Here is how much of TeX's memory you used:
  34888 strings out of 481292
  823226 string characters out of 2906380
- 1744104 words of memory out of 3000000
+ 1744106 words of memory out of 3000000
  49529 multiletter control sequences out of 15000+200000
  564960 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1521,7 +1517,7 @@ b><C:/Users/adestefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic
 /uhvb8a.pfb><C:/Users/adestefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
 w/helvetic/uhvr8a.pfb><C:/Users/adestefa/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/urw/helvetic/uhvro8a.pfb>
-Output written on SolarCruiserTID_11months-DeStefano.pdf (28 pages, 5538277 byt
+Output written on SolarCruiserTID_11months-DeStefano.pdf (28 pages, 5538292 byt
 es).
 PDF statistics:
  706 PDF objects out of 1000 (max. 8388607)

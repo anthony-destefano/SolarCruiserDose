@@ -3,7 +3,7 @@ TITLE
 Kapton 1000000.0 microns with 1.778e+01 MeV mono-energetic electron environment
 GEOMETRY 1
 
-4 50 100.0 * Kapton as RCD (cm)
+4 50 1.80E+01 * Kapton as RCD (cm)
 ************************* SOURCE ********************************
 * energy (MeV)
 ELECTRONS

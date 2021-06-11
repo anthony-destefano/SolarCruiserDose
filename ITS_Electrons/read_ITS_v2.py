@@ -65,7 +65,7 @@ if plot_flag == 'SAVE_TOT_DOSE':
     dose_filename = 'dose_vs_E.txt'
 
     with open(dose_filename, 'a') as dose_f:
-        print(np.format_float_scientific(E_at_dose, precision=6), np.format_float_scientific(tot_dose/100., precision=6) , file=dose_f) # MeV, Sv/(#/cm^2)
+        print(np.format_float_scientific(E_at_dose, precision=6), np.format_float_scientific(tot_dose, precision=6) , file=dose_f) # MeV, Sv/(#/cm^2)
 
 #print(depth)
 ITS_filename = ITS_filename.replace('.', '')

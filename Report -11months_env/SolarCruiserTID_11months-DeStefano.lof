@@ -1,5 +1,5 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Example of TRIM setup.\relax }}{3}{figure.caption.2}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Left axis: Depth in Kapton vs.\ energy for various dose-depth percentiles. Right axis: Dose per fluence vs.\ energy.\relax }}{4}{figure.caption.3}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Left axis: Depth in Kapton vs.\ proton energy for various dose-depth percentiles. Right axis: Dose per proton fluence vs.\ energy.\relax }}{4}{figure.caption.3}%
 \contentsline {figure}{\numberline {3}{\ignorespaces The dose per fluence of protons is compared between SRIM (blue circles) and \cite {pelliccioni2000overview} (orange triangles).\relax }}{5}{figure.caption.4}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Screen shot of the setup used in computing the low-energy proton flux environment in L2-CPE.\relax }}{8}{figure.caption.5}%
 \contentsline {figure}{\numberline {5}{\ignorespaces The differential TID vs.\ depth for a 11-month isotropic SPE environment at 0.984 AU in $150 \mu $m of Kapton.\relax }}{12}{figure.caption.7}%

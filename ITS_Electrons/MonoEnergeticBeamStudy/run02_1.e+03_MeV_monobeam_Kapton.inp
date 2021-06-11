@@ -3,7 +3,7 @@ TITLE
 Kapton 1000000.0 microns with 1.e+03 MeV mono-energetic electron environment
 GEOMETRY 1
 
-4 50 100.0 * Kapton as RCD (cm)
+4 50 3.20E+02 * Kapton as RCD (cm)
 ************************* SOURCE ********************************
 * energy (MeV)
 ELECTRONS
@@ -11,7 +11,7 @@ ENERGY 1000.0
 
 DIRECTION
  COSINE-LAW 0 90
-CUTOFFS 0.1 0.1 * electron and photon cut-offs (MeV)
+CUTOFFS 1.0 1.0 * electron and photon cut-offs (MeV)
 
 * run size options
 HISTORIES-PER-BATCH 5000

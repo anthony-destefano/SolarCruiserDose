@@ -7,11 +7,15 @@ import glob
 
 #  python .\generate_ITS_input_monoBeam.py 1.E-6 1E3 37 50 150 run01 6.379724E-04 1.0E-03 5000 320 4 COSINE-LAW
 
+# E in MeV, depth in um
+def get_depth_from_energy(E): 
+	return 2.* 2.088E-1 / ( (E/2.04E-3)**-1.686 + (E*1.E6)**-0.782 )
+
 Emin = float(sys.argv[1]) # MeV
 Emax = float(sys.argv[2]) # MeV
 NE   = int(sys.argv[3])
 ITS_material_bins     = int(sys.argv[4])
-ITS_materal_thickness = float(sys.argv[5]) # in microns
+ITS_materal_thickness = float(sys.argv[5]) # in microns OVERWITTEN
 ITS_filename_id       = sys.argv[6]
 ITS_electron_cutoff   = float(sys.argv[7]) # MeV
 ITS_photon_cutoff     = float(sys.argv[8]) # MeV
@@ -40,6 +44,11 @@ for Ei in E:
 	if Ei > 32.:
 		ITS_electron_cutoff = 0.1 # MeV
 		ITS_photon_cutoff   = 0.1 # MeV
+	if Ei > 320.:
+		ITS_electron_cutoff = 1. # MeV
+		ITS_photon_cutoff   = 1. # MeV
+
+	ITS_materal_thickness = get_depth_from_energy(Ei)
 
 	with open(ITS_input_filename, 'w') as ITS_f:
 		print(ITS_input_filename)
